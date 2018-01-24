@@ -1,0 +1,23 @@
+.element-atom,.interactive-atom{
+    margin:0 !important
+}
+
+.l-footer{display:block !important;position:relative}
+
+.oi-bg {
+  background: #e8cd00;
+}
+
+.oi-content {
+  background: #ffe200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.oi-content img {
+  flex: 1 1 auto;
+  max-width: 800px;
+  width: 100%;
+}

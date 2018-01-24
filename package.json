@@ -1,0 +1,24 @@
+{
+  "name": "interactive-gdpr-opt-in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardian/interactive-gdpr-opt-in.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guardian/interactive-gdpr-opt-in/issues"
+  },
+  "homepage": "https://github.com/guardian/interactive-gdpr-opt-in#readme"
+}
