@@ -1,0 +1,33 @@
+<thingaling></thingaling>
+<script>
+  fetch('public/main.html').then(
+    response=>response.text()
+  ).then(
+    html=>{
+      document.querySelector('thingaling').innerHTML = html
+    }
+  )
+
+  const addCss = url => {
+    const node = document.createElement('link');
+    node.type = 'text/css';
+    node.rel = 'stylesheet';
+    node.href = url;
+
+    document.body.appendChild(node);
+  }
+
+  ['public/main.css'].forEach(addCss)
+
+</script>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.gs-container {
+  max-width: 1080px;
+  margin: auto;
+}
+</style>

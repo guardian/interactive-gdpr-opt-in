@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "commander": "^2.13.0",
+    "concurrently": "^3.5.1",
     "node-sass": "^4.7.2",
+    "simple-server": "^1.0.1",
     "webpack": "^3.10.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-server": "open http://localhost:8282/test.html && simple-server . 8282",
+    "watch-css": "node-sass sass/main.scss public/main.css -w",
+    "watch": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-server\"",
+    "release": "./bin/release.js && aws s3 cp --recursive release s3://gdn-cdn/atoms/2018/02/gdpr-opt-in --profile interactives"
   },
   "repository": {
     "type": "git",
