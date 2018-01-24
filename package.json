@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "commander": "^2.13.0",
     "concurrently": "^3.5.1",
     "node-sass": "^4.7.2",
     "simple-server": "^1.0.1",
