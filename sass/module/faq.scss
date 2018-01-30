@@ -30,7 +30,7 @@ $colour-faq: $colour-purple;
 	min-height: $gs-baseline/2 + $expandy-size + $gs-baseline/2;
 	display: flex;
 	align-items: center;
-	&:before {
+	i {
 		content: '';
 		width: $expandy-size;
 		height: $expandy-size;
@@ -39,9 +39,21 @@ $colour-faq: $colour-purple;
 		left: $gs-baseline;
 		border-radius: 100%;
 		border: 1px solid $colour-faq;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			transform: scale(1.25);
+		}
+		svg * {
+			fill: $colour-faq;
+		}
 	}
-	.oi-faq[open] &:before {
-		background: $colour-faq;
+	.oi-faq[open] & i {
+		background-color: $colour-faq;
+		svg * {
+			fill: #fff;
+		}
 	}
 }
 

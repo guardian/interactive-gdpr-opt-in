@@ -1,24 +1,25 @@
 <thingaling></thingaling>
+<script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch,Promise"></script> 
 <script>
-  fetch('public/main.html').then(
-    response=>response.text()
-  ).then(
-    html=>{
-      document.querySelector('thingaling').innerHTML = html;
-      const $script = document.createElement('script');
-      $script.src = '/public/main.js';
-      document.body.appendChild($script);
-    }
-  )
+fetch("public/main.html")
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(html) {
+    document.querySelector("thingaling").innerHTML = html;
+    var $script = document.createElement("script");
+    $script.src = "/public/main.js";
+    document.body.appendChild($script);
+  });
 
-  const addCss = url => {
-    const node = document.createElement('link');
-    node.type = 'text/css';
-    node.rel = 'stylesheet';
-    node.href = url;
+var addCss = function addCss(url) {
+  var node = document.createElement("link");
+  node.type = "text/css";
+  node.rel = "stylesheet";
+  node.href = url;
 
-    document.body.appendChild(node);
-  }
+  document.body.appendChild(node);
+};
 
-  ['public/main.css','etc/gu.css','etc/gu-fonts.css'].forEach(addCss)
+["public/main.css", "etc/gu.css", "etc/gu-fonts.css"].forEach(addCss);
 </script>

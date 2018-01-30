@@ -15,7 +15,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: $gs-baseline * 4;
+	height: $gs-baseline * 5;
+	box-sizing: border-box;
 	svg {
 		vertical-align: middle;
 		transform: scale(1.125) translateX(.5em);
