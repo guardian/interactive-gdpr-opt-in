@@ -57,8 +57,7 @@ $colour-faq: $colour-purple;
 .oi-faq__footer {
 	.oi-cta {
 		margin-bottom: $gs-gutter/2;
-		padding-top: $gs-gutter*.75;
-		padding-bottom: $gs-gutter*.75;
+		height: $gs-baseline * 3.5;
 	}
 	@media (min-width: $mq-desktop) {
 		display: flex;

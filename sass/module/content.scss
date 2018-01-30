@@ -22,7 +22,7 @@
 	font-family: $font-egyptian;
 	font-size: $font-size-title;
 	font-weight: 300;
-	padding: $gs-gutter/3 0 $gs-gutter;
+	padding: $gs-gutter/4 0 $gs-gutter;
 }
 
 @media (min-width: $mq-desktop) {
@@ -31,7 +31,7 @@
 		.oi-content__header {
 			width: gs-span(3);
 			flex: 0 0 auto;
-			padding: $gs-gutter / 2 $gs-gutter $gs-gutter;
+			padding-right: $gs-gutter;
 			padding-left: 0;
 		}
 		.oi-content__body {

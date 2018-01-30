@@ -6,7 +6,7 @@
 @import 'module/content.scss';
 
 .element-atom,.interactive-atom{
-		margin:0 !important
+	margin:0 !important
 }
 
 .l-footer{
@@ -21,6 +21,10 @@
 
 .oi-wrap {
 	padding: 0 $gs-gutter;
+}
+
+.oi-hero-copy {
+	height: 9em;
 }
 
 .oi-hero {
