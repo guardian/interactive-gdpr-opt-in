@@ -1,23 +1,83 @@
+@import 'helpers';
+
+$colour-purple: #9F1177;
+$colour-cream: #F0EADD;
+$colour-yellow: #FFE300;
+$colour-gu-black: #121212;
+
+$font-egyptian: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
+$font-serif: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+$font-text: "Guardian Text Egyptian Web",Georgia,serif;
+
+$font-size-title: 1.5em;
+
 .element-atom,.interactive-atom{
     margin:0 !important
 }
 
 .l-footer{display:block !important;position:relative}
 
-.oi-bg {
-  background: #e8cd00;
+.oi-hero {
+  background: $colour-gu-black;
+  padding-top: $gs-column-width * 3;
 }
 
-.oi-content {
-  background: #ffe200;
+.oi-content--purple {
+  background: $colour-purple;
+  color: #fff;
+}
+
+.oi-content--yellow {
+  background: $colour-cream;
+  color: $colour-purple;
+}
+
+.oi-section-body {
+  padding-left: $gs-gutter;
+  background: hsla(0, 0%, 0%, .05);
+}
+
+.oi-content .gs-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  .oi-section-header {
+    width: gs-span(3);
+    flex: 0 0 auto;
+    padding: $gs-gutter / 2 $gs-gutter $gs-gutter;
+    padding-left: 0;
+  }
+  .oi-section-body {
+    padding: $gs-gutter / 2 $gs-gutter $gs-gutter;
+    flex: 1 1 0;
+    .oi-section-body-wrap {
+      max-width: gs-span(8);
+    }
+  }
+}
+
+.oi-section-header {
+  font-family: $font-egyptian;
+  font-size: $font-size-title;
+  font-weight: 300;
 }
 
 .oi-content img {
   flex: 1 1 auto;
   max-width: 800px;
   width: 100%;
+}
+
+.oi-cta {
+  display: block;
+  padding: $gs-gutter / 2 $gs-gutter;
+  background: $colour-yellow;
+  color: $colour-gu-black;
+  font-family: $font-serif;
+  border-radius: 99999em;
+  transition: .125ms;
+  text-decoration: none;
+  &:hover {
+    color: $colour-gu-black;
+    background: darken($colour-yellow,5%);
+    text-decoration: none;
+  }
 }

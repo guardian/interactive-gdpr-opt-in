@@ -1,0 +1,25 @@
+$gs-gutter: 1.25rem;
+$gs-baseline: 0.75rem;
+$gs-column-width: 3.75rem;
+
+// Helpers
+// =============================================================================
+@function gs-span($n-columns) {
+  @return $n-columns * $gs-column-width + $gs-gutter * ($n-columns - 1);
+}
+
+
+@mixin u-h {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.u-h {
+  @include u-h;
+}

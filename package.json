@@ -4,17 +4,23 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "concurrently": "^3.5.1",
-    "http-server": "^0.11.1",
-    "node-sass": "^4.7.2",
-    "webpack": "^3.10.0"
+    "fs-extra": "^5.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-loader": "^7.1.2",
+    "node-sass": "^4.7.2",
+    "webpack": "^3.10.0",
+    "concurrently": "^3.5.1",
+    "http-server": "^0.11.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-server": "open http://127.0.0.1:8082/test.html && http-server . 8282",
-    "watch-css": "node-sass sass/main.scss public/main.css --output-style compressed && node-sass sass/main.scss public/main.css --output-style compressed -w",
-    "watch": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-server\"",
+    "watch-server": "open http://127.0.0.1:8082/test.html && http-server -c-1 . 8282",
+    "watch-css": "node-sass sass public/main.css --output-style compressed && node-sass sass/main.scss public/main.css --output-style compressed -w",
+    "watch-js": "webpack --watch",
+    "watch": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-js\" \"npm run watch-server\"",
     "release": "./bin/release.js && aws s3 cp --recursive release s3://gdn-cdn/atoms/2018/02/gdpr-opt-in --profile interactives"
   },
   "repository": {
