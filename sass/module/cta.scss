@@ -36,12 +36,9 @@
 		}
 	}
 	&.oi-cta--paragraph {
-		background: transparent;
 		color: $colour-text;
 		pointer-events: none;
 		cursor: default;
-		padding-left: 0;
-		padding-right: 0;
 	}
 	&.oi-cta--primary {
 		color: $colour-gu-black;
@@ -75,21 +72,5 @@ input.oi-cta--secondary {
 		background: #fff!important;
 		border-color: currentColor!important;
 		color: $colour-text!important;
-	}
-}
-
-.oi-cta__mailer {
-	display: flex;
-	.oi-cta:first-child:not(:last-child) {
-		flex: 1 1 0;
-		margin-right: -1px;
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-	.oi-cta:last-child:not(:first-child) {
-		flex: 0 0 auto;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-		padding-left: $gs-gutter/1.25;
 	}
 }

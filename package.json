@@ -28,7 +28,7 @@
     "watch-server": "open http://127.0.0.1:8082/test.html && http-server -c-1 . 8282",
     "watch-css": "postcss sass/main.scss --output public/main.css -w -m",
     "watch-js": "webpack --watch",
-    "watch": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-js\" \"npm run watch-html\" \"npm run watch-server\"",
+    "watch": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-js\" \"npm run watch-server\"",
     "release": "./bin/release.js && aws s3 cp --acl public-read --recursive release s3://gdn-cdn/atoms/2018/02/gdpr-opt-in --profile interactives"
   },
   "repository": {

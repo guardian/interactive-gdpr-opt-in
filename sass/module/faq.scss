@@ -3,13 +3,16 @@ $colour-faq: $colour-purple;
 
 .oi-faq__wrap {
 	.oi-faq {
-		margin-bottom: $gs-baseline / 3;
+		margin-bottom: $gs-baseline / 1.5;
 	}
 }
 
 .oi-faq {
 	summary {
 		list-style: none;
+		&:focus {
+			outline: 0;
+		}
 	}
 	summary::-webkit-details-marker {
 		display:none;
@@ -28,14 +31,19 @@ $colour-faq: $colour-purple;
 }
 
 .oi-faq__header {
+	padding-top: $gs-baseline;
+	padding-bottom: $gs-baseline;
 	font-size: $font-size-title;
 	font-family: $font-egyptian;
 	font-weight: bold;
 	position: relative;
 	color: $colour-faq;
-	min-height: $gs-baseline/2 + $expandy-size + $gs-baseline/2;
+	min-height: $expandy-size;
 	display: flex;
 	align-items: center;
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
 	i {
 		content: '';
 		width: $expandy-size;
@@ -76,6 +84,9 @@ $colour-faq: $colour-purple;
 	.oi-cta {
 		margin-bottom: $gs-gutter/2;
 		height: $gs-baseline * 3.5;
+	}
+	.oi-cta--paragraph {
+		padding-left: 0;;
 	}
 	@media (min-width: $mq-desktop) {
 		display: flex;

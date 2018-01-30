@@ -46,6 +46,7 @@
 									{{#body}}
 										<p>{{.}}</p>
 									{{/body}}
+									<footer class="oi-faq__footer"></footer>
 								</div>
 							</details>
 						{{/faqs}}
@@ -67,11 +68,13 @@
 						{{> svg-arrow}}
 					</a>
 					<p>Get a new link.</p>
-					<div class="oi-cta__mailer">
-						<input class="oi-cta oi-cta--secondary" placeholder="your email"/>
-						<button class="oi-cta oi-cta--secondary">
-							Send me a link
-						</button>
+					<form class="oi-resend-widget">
+						<div class="oi-resend-widget__hotdog">
+							<input required type="email" class="oi-cta oi-cta--secondary" name="email" placeholder="your email"/>
+							<button class="oi-cta oi-cta--secondary">
+								Send me a link
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>

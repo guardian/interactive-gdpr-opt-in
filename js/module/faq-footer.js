@@ -1,5 +1,3 @@
-"use strict";
-
 const VOTE_YAY = 'helpful';
 const VOTE_NAY = 'useless';
 
@@ -19,7 +17,7 @@ const makeVoteButton = (type, title) => {
 }
 
 const $thanks = (()=>{
-	const $button = document.createElement('button');
+	const $button = document.createElement('p');
 	$button.className = 'oi-cta oi-cta--paragraph';
 	$button.innerText = TEXT_TKS
 	return $button;

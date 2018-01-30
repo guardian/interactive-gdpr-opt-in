@@ -1,7 +1,9 @@
 import {inject as injectFaqFooter} from './module/faq-footer';
+import {inject as injectResend} from './module/resend-widget';
 
 const injectables = [
-	['.oi-faq__footer',injectFaqFooter]
+	['.oi-faq__footer', injectFaqFooter],
+	['.oi-resend-widget', injectResend]
 ]
 
 const onReady = () => {
