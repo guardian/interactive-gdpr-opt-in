@@ -70,5 +70,49 @@
 "use strict";
 
 
+var _faqFooter = __webpack_require__(1);
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var injectables = [['.oi-faq__footer', _faqFooter.inject]];
+
+var onReady = function onReady() {
+	injectables.forEach(function (injectable) {
+		return [].concat(_toConsumableArray(document.querySelectorAll(injectable[0]))).forEach(function ($el) {
+			return injectable[1]($el);
+		});
+	});
+};
+
+var boot = function boot(fn) {
+	if (document.readyState == ('interactive' || 'complete')) {
+		fn();
+	} else {
+		document.addEventListener('readystatechange', function (ev) {
+			if (document.readyState === 'interactive') fn();
+		});
+	}
+};
+
+boot(onReady);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var template = "\n\t<a class=\"oi-cta oi-cta--secondary--purple\">\n\t\tThat was helpful\n\t</a>\n\t<a class=\"oi-cta oi-cta--secondary--purple\">\n\t\tI hate everything that stands for\n\t</a>\n";
+
+var inject = function inject($element) {
+	$element.innerHTML = template;
+};
+
+exports.inject = inject;
+
 /***/ })
 /******/ ]);

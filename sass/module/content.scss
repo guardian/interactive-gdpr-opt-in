@@ -1,0 +1,46 @@
+.oi-content {
+	overflow: hidden;
+}
+
+.oi-content--purple {
+	background: $colour-purple;
+	color: #fff;
+}
+
+.oi-content--yellow {
+	background: $colour-cream;
+	color: $colour-purple;
+}
+
+.oi-content__body {
+	.oi-content__body-wrap > * {
+		margin-bottom: $paragraph-spacing;
+	}
+}
+
+.oi-content__header {
+	font-family: $font-egyptian;
+	font-size: $font-size-title;
+	font-weight: 300;
+	padding: $gs-gutter/3 0 $gs-gutter;
+}
+
+@media (min-width: $mq-desktop) {
+	.oi-content .gs-container {
+		display: flex;
+		.oi-content__header {
+			width: gs-span(3);
+			flex: 0 0 auto;
+			padding: $gs-gutter / 2 $gs-gutter $gs-gutter;
+			padding-left: 0;
+		}
+		.oi-content__body {
+			padding: $gs-gutter / 2 $gs-gutter $gs-gutter;
+			padding-right: 0;
+			flex: 1 1 0;
+			.oi-content__body-wrap {
+				max-width: gs-span(8);
+			}
+		}
+	}
+}

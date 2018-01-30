@@ -4,7 +4,10 @@
     response=>response.text()
   ).then(
     html=>{
-      document.querySelector('thingaling').innerHTML = html
+      document.querySelector('thingaling').innerHTML = html;
+      const $script = document.createElement('script');
+      $script.src = '/public/main.js';
+      document.body.appendChild($script);
     }
   )
 
@@ -19,4 +22,3 @@
 
   ['public/main.css','etc/gu.css','etc/gu-fonts.css'].forEach(addCss)
 </script>
-<script src="/public/main.js"></script>

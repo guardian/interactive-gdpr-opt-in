@@ -1,8 +1,20 @@
 @font-face {
   font-family: "Guardian Egyptian Web";
   src:
-    url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Regular.woff") format("woff");
+    url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Medium.woff") format("woff");
   font-weight: 400;
+}
+@font-face {
+  font-family: "Guardian Egyptian Web";
+  src:
+    url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Light.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Guardian Egyptian Web";
+  src:
+    url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Bold.woff") format("woff");
+  font-weight: 700;
 }
 @font-face {
   font-family: "Guardian Text Egyptian Web";
