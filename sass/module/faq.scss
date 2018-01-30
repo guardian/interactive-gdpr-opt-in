@@ -1,6 +1,12 @@
 $expandy-size: 2.75rem;
 $colour-faq: $colour-purple;
 
+.oi-faq__wrap {
+	.oi-faq {
+		margin-bottom: $gs-baseline / 3;
+	}
+}
+
 .oi-faq {
 	summary {
 		list-style: none;
