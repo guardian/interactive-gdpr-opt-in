@@ -13,6 +13,7 @@
 }
 
 .oi-content__body {
+	padding-bottom: $paragraph-spacing * 2;
 	.oi-content__body-wrap > * {
 		margin-bottom: $paragraph-spacing;
 	}
@@ -21,8 +22,8 @@
 .oi-content__header {
 	font-family: $font-egyptian;
 	font-size: $font-size-title;
-	font-weight: 300;
 	padding: $gs-gutter/4 0 $gs-gutter;
+	font-weight: 700;
 }
 
 @media (min-width: $mq-desktop) {
@@ -33,11 +34,13 @@
 			flex: 0 0 auto;
 			padding-right: $gs-gutter;
 			padding-left: 0;
+			font-weight: 300;
 		}
 		.oi-content__body {
-			padding: $gs-gutter / 2 $gs-gutter $gs-gutter;
-			padding-right: 0;
+			padding-top: $gs-gutter / 2;
+			padding-left: $gs-gutter;
 			flex: 1 1 0;
+			background: hsla(0, 0%, 0%, .033);
 			.oi-content__body-wrap {
 				max-width: gs-span(8);
 			}

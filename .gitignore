@@ -2,6 +2,7 @@
 /node_modules
 /release
 /public/main.css
+/public/main.html
 /public/main.js
 /public/main.css.map
 /public/main.js.map

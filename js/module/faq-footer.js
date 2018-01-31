@@ -9,28 +9,29 @@ const makeVoteButton = (type, title) => {
 	const $button = document.createElement('button');
 	$button.className = 'oi-cta oi-cta--secondary--purple';
 	$button.dataset.linkName = `optin : ${type} : ${title}`
-	$button.innerText = type === VOTE_YAY
+	$button.innerHTML = type === VOTE_YAY
 		? TEXT_YAY
 		: TEXT_NAY
 
 	return $button;
 }
 
-const $thanks = (()=>{
+const makeThanks = () => {
 	const $button = document.createElement('p');
 	$button.className = 'oi-cta oi-cta--paragraph';
-	$button.innerText = TEXT_TKS
+	$button.innerHTML = TEXT_TKS
 	return $button;
-})()
+}
 
 const inject = ($element) => {
 
-	const $title = $element.closest('.oi-faq').querySelector('.oi-faq__header').innerText;
+	const $title = $element.dataset.name;
+
 	[VOTE_YAY, VOTE_NAY].forEach(vote => {
 		const $button = makeVoteButton(vote, $title);
 		$button.addEventListener('click', () => {
 			$element.innerHTML = ''
-			$element.appendChild($thanks);
+			$element.appendChild(makeThanks());
 		})
 		$element.appendChild(
 			$button

@@ -21,11 +21,12 @@
 }
 
 .oi-wrap {
-	padding: 0 $gs-gutter;
+	padding: 0 $gs-gutter / 3;
 }
 
 .oi-hero-copy {
-	height: 9em;
+	width: 30em;
+	max-width: 100%;
 }
 
 .oi-hero {

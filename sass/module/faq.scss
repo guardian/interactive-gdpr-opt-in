@@ -39,6 +39,7 @@ $colour-faq: $colour-purple;
 	position: relative;
 	color: $colour-faq;
 	min-height: $expandy-size;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	&:hover, &:focus {

@@ -26,7 +26,7 @@ const send = (formdata) =>
 	xhr.send(formdata);
 	setTimeout(()=>{
 		xhr.abort();
-	},500);
+	},2000);
 });
 
 const $error = (()=>{
