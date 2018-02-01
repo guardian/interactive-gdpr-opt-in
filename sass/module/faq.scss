@@ -1,5 +1,5 @@
 $expandy-size: 2.75rem;
-$colour-faq: $colour-purple;
+$colour-faq: $colour-purple-dark;
 
 .oi-faq__wrap {
 	.oi-faq {
@@ -17,7 +17,12 @@ $colour-faq: $colour-purple;
 	summary::-webkit-details-marker {
 		display:none;
 	}
-	background: #fff;
+	&[open] {
+		@include multiline(4, $colour-purple-dark)
+		background-color: #fff;
+		border-color: $colour-purple;
+	}
+	background: $colour-purple;
 	border-top: 1px solid $colour-faq;
 }
 
@@ -25,23 +30,21 @@ $colour-faq: $colour-purple;
 .oi-faq__details {
 	padding:
 		$gs-baseline/2
-		$gs-baseline
 		$gs-baseline/2
-		$gs-baseline + $expandy-size + $gs-baseline
+		$gs-baseline
+		$gs-baseline/2 + $expandy-size + $gs-baseline/1.5
 }
 
 .oi-faq__header {
-	padding-top: $gs-baseline;
-	padding-bottom: $gs-baseline;
-	font-size: $font-size-title;
+	font-size: $font-size-subtitle;
 	font-family: $font-egyptian;
+	line-height: 1.2;
 	font-weight: bold;
 	position: relative;
 	color: $colour-faq;
 	min-height: $expandy-size;
 	cursor: pointer;
-	display: flex;
-	align-items: center;
+	max-width: gs-span(3);
 	&:hover, &:focus {
 		text-decoration: underline;
 	}
@@ -50,8 +53,8 @@ $colour-faq: $colour-purple;
 		width: $expandy-size;
 		height: $expandy-size;
 		position: absolute;
-		top: $gs-baseline;
-		left: $gs-baseline;
+		top: $gs-baseline/2;
+		left: $gs-baseline/2;
 		border-radius: 100%;
 		border: 1px solid $colour-faq;
 		display: flex;
@@ -60,14 +63,17 @@ $colour-faq: $colour-purple;
 		svg {
 			transform: scale(1.25);
 		}
-		svg * {
-			fill: $colour-faq;
-		}
 	}
-	.oi-faq[open] & i {
+	.oi-faq & i {
 		background-color: $colour-faq;
 		svg * {
 			fill: #fff;
+		}
+	}
+	.oi-faq[open] & i {
+		background-color: transparent;
+		svg * {
+			fill: $colour-faq;
 		}
 	}
 }

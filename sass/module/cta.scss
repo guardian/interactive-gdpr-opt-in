@@ -15,7 +15,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: $gs-baseline * 5;
+	height: $size-button-height;
 	box-sizing: border-box;
 	svg {
 		vertical-align: middle;
@@ -40,10 +40,10 @@
 		cursor: default;
 	}
 	&.oi-cta--primary {
-		color: $colour-gu-black;
+		color: $colour-black;
 		background: $colour-yellow;
 		&:hover, &:focus {
-			color: $colour-gu-black;
+			color: $colour-black;
 			background: darken($colour-yellow,5%);
 		}
 	}
@@ -59,9 +59,9 @@
 	}
 	&.oi-cta--secondary--purple {
 		@extend .oi-cta.oi-cta--secondary;
-		color: $colour-purple;
+		color: $colour-purple-dark;
 		&:hover, &:focus {
-			background: $colour-purple;
+			background: $colour-purple-dark;
 		}
 	}
 }
