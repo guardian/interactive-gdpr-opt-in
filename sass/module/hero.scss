@@ -63,9 +63,11 @@
 
 @mixin transform-thing($id) {
 	$timing: $id * 10s;
+	will-change: transform;
 	transform-origin: center center;
 	animation: hero-ken-burns $timing cubic-bezier(.1,.49,.15,1) both;
  	> g {
+		will-change: transform;
 		animation: hero-ken-burns-backwards $timing cubic-bezier(.1,.49,.15,1) both;
 		transform-origin: center center;
 	}

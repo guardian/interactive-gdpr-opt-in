@@ -7,6 +7,7 @@ $expandy-size: 2.75rem;
 }
 
 .oi-faq {
+	position: relative;
 	summary {
 		list-style: none;
 		&:focus {
@@ -70,6 +71,10 @@ $expandy-size: 2.75rem;
 		svg {
 			position: absolute;
 			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
 		}
 		svg:nth-child(1) {
 			transform: scale(1.25);
@@ -109,6 +114,8 @@ $expandy-size: 2.75rem;
 	padding-top: 0;
 	padding-bottom: $paragraph-spacing/2;
 	color: $colour-text;
+	transition: max-height .125s ease-in;
+	overflow: hidden;
 	& > * {
 		margin-bottom: $paragraph-spacing;
 	}

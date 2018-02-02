@@ -17,6 +17,7 @@
 	justify-content: space-between;
 	height: $size-button-height;
 	box-sizing: border-box;
+	contain: layout style paint;
 	svg {
 		vertical-align: middle;
 		transform: scale(1.125) translateX(.5em);
@@ -58,11 +59,11 @@
 			border-color: transparent;
 		}
 	}
-	&.oi-cta--secondary--purple {
+	&.oi-cta--secondary--faq {
 		@extend .oi-cta.oi-cta--secondary;
-		color: $colour-purple-dark;
+		color: $colour-faq-alt;
 		&:hover, &:focus {
-			background: $colour-purple-dark;
+			background: $colour-faq-alt;
 		}
 	}
 
