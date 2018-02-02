@@ -1,16 +1,32 @@
-$border-color: rgba(0,0,0,.25);
-
 .oi-content {
 	overflow: hidden;
 }
 
+@function get-text-color($color) {
+	@if (lightness($color) > 50) {
+		@return #333;
+	} @else {
+		@return #ffffff;
+	}
+}
+
 @mixin oi-content-tone($bg, $text, $cta:$bg) {
 	background: $bg;
+	color: get-text-color($bg);
+	.oi-content__body,
+	.oi-content-cta__icon {
+		border-color: transparentize(get-text-color($bg), .75);
+	}
+	.oi-content-cta__icon {
+		@if (lightness($bg) <= 50) {
+			border: 0;
+		}
+	}
 	.oi-content__header {
 		color: $text;
 	}
 	.oi-content-cta__icon {
-		background: $bg;
+		background: $cta;
 	}
 }
 
@@ -22,8 +38,8 @@ $border-color: rgba(0,0,0,.25);
 	@include oi-content-tone($colour-cream, $colour-cream-dark)
 }
 
-.oi-content--dark {
-	@include oi-content-tone($colour-neutral-light, $colour-purple-dark)
+.oi-content--black {
+	@include oi-content-tone($colour-black, #fff, $colour-purple-dark)
 }
 
 .oi-content__body {
@@ -54,7 +70,8 @@ $border-color: rgba(0,0,0,.25);
 			padding-top: $gs-gutter / 2;
 			padding-left: $gs-gutter;
 			flex: 1 1 0;
-			border-left: 1px solid $border-color;
+			border-left-style: solid;
+			border-left-width: 1px;
 			.oi-content__body-wrap {
 				max-width: gs-span(8);
 			}
@@ -79,13 +96,21 @@ $border-color: rgba(0,0,0,.25);
 }
 .oi-content-cta__icon {
 	display: none;
+	svg * {
+		fill: currentColor;
+	}
+	svg {
+		height: 50%;
+		width: 50%;
+	}
 	@media (min-width: $mq-desktop) {
-		border: 1px solid $border-color;
+		border: 1px solid;
 		height: $size-button-height;
 		width: $size-button-height;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		border-radius: 100%;
+		transform: scale(.65);
 	}
 }

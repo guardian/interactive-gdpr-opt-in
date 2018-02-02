@@ -10,7 +10,7 @@ fs.remove('./release')
 )
 .then(()=>
   fs.readFile(`./release/v/${version}/main.html`, 'utf8').then(data =>
-    data.replace(/public\/assets\//g, `https://interactive.guim.co.uk/atoms/2018/02/gdpr-opt-in/v/${version}/assets/`)
+    data.replace(/\/public\/assets\//g, `https://interactive.guim.co.uk/atoms/2018/02/gdpr-opt-in/v/${version}/assets/`)
   )
   .then(data =>
     fs.writeFile(`./release/v/${version}/main.html`, data, 'utf8')

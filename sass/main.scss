@@ -2,6 +2,7 @@
 @import 'helper/etc.scss';
 
 @import 'module/faq.scss';
+@import 'module/hero.scss';
 @import 'module/cta.scss';
 @import 'module/content.scss';
 @import 'module/resend-widget.scss';
@@ -22,15 +23,4 @@
 
 .oi-wrap {
 	padding: 0 $gs-gutter / 3;
-}
-
-.oi-hero-copy {
-	width: 30em;
-	max-width: 100%;
-}
-
-.oi-hero {
-	background: $colour-black;
-	padding-top: $gs-column-width * 3;
-	padding-bottom: $gs-gutter;
 }

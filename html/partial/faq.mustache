@@ -1,0 +1,14 @@
+<details class="oi-faq">
+	<summary class="oi-faq__header">
+		<i irrelevant>
+			{{> svg-plus}}
+		</i>
+		{{title}}
+	</summary>
+	<div class="oi-faq__details">
+		{{#body}}
+			<p>{{.}}</p>
+		{{/body}}
+		<footer data-name="{{title}}" class="oi-faq__footer"></footer>
+	</div>
+</details>

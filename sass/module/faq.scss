@@ -104,3 +104,18 @@ $colour-faq: $colour-purple-dark;
 		}
 	}
 }
+
+.oi-faq-more {
+	position: relative;
+	.oi-faq-more__content[aria-hidden=true] {
+		display: block;
+		position: absolute;
+		left: -99999px;
+		top: 0;
+		transition: height .25s ease-in;
+	}
+	.oi-faq-more__content.oi-faq-more__content--reveal {
+		position: static;
+		overflow: hidden;
+	}
+}

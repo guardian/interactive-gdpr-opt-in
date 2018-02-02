@@ -3,8 +3,14 @@
 
 	<div class="oi-hero oi-wrap">
 		<div class="gs-container">
-			<h1 class="u-h">Don't miss out. Stay Opted In</h1>
-			<img class="oi-hero-copy" src="public/assets/hero.png" />
+			<div class="oi-hero__wrapper">
+				<div class="oi-hero__title">
+					<h1>Stay with us</h1>
+				</div>
+				<div class="oi-hero__bg-container">
+					{{> svg-hero}}
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -16,8 +22,6 @@
 			</div>
 			<div class="oi-content__body">
 				<div class="oi-content__body-wrap">
-					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
-					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
 					<div class="oi-content-cta">
 						<div class="oi-content-cta__icon">
 							{{> svg-plus}}
@@ -26,6 +30,14 @@
 							{{> cta}}
 						</div>
 					</div>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
+					<p>Your support is vital in helping the Guardian do the most important journalism of all: that which takes time and effort. Hundreds of thousands of readers now support the Guardian's independent, quality and investigative journalism.</p>
 				</div>
 			</div>
 		</div>
@@ -41,20 +53,7 @@
 				<div class="oi-content__body-wrap">
 					<div class="oi-faq__wrap">
 						{{#faqs}}
-							<details class="oi-faq">
-								<summary class="oi-faq__header">
-									<i irrelevant>
-										{{> svg-plus}}
-									</i>
-									{{title}}
-								</summary>
-								<div class="oi-faq__details">
-									{{#body}}
-										<p>{{.}}</p>
-									{{/body}}
-									<footer data-name="{{title}}" class="oi-faq__footer"></footer>
-								</div>
-							</details>
+							{{> faq}}
 						{{/faqs}}
 					</div>
 				</div>

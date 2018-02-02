@@ -14,7 +14,7 @@
   font-family: "Guardian Egyptian Web";
   src:
     url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Bold.woff") format("woff");
-  font-weight: 700;
+  font-weight: 600;
 }
 @font-face {
   font-family: "Guardian Text Egyptian Web";

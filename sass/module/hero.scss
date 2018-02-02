@@ -1,0 +1,119 @@
+.oi-hero {
+	overflow: hidden;
+	background: $colour-neutral-light;
+}
+
+.oi-hero__wrapper {
+	position: relative;
+	.oi-hero__title {
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		padding: 8em 0;
+		margin: auto;
+		h1 {
+			margin: auto;
+		}
+	}
+	.oi-hero__bg-container {
+		position: absolute;
+		z-index: 9;
+		left: -150%;
+		width: 400%;
+		top: -4em;
+		bottom: -4em;
+		svg {
+			height: 100%;
+			display: block;
+			margin: auto;
+			width: 100%;
+		}
+	}
+	@media (min-width: $mq-desktop) {
+		margin-left: gs-span(3) + $gs-gutter*2;
+		.oi-hero__title {
+			text-align: left;
+			h1 {
+				float: left;
+			}
+		}
+		.oi-hero__bg-container {
+			left: -54.5em;
+			width: auto;
+			svg {
+				width: 1960px;
+			}
+		}
+	}
+}
+
+.oi-hero__title {
+	color: #fff;
+	overflow: hidden;
+	h1 {
+		font-size: 4em;
+		font-family: $font-egyptian;
+		width: 4em;
+		font-weight: 600;
+		line-height: 1;
+	}
+}
+
+@mixin transform-thing($id) {
+	$timing: $id * 10s;
+	transform: scale(1.1);
+	transform-origin: center center;
+	animation: hero-ken-burns $timing cubic-bezier(.1,.49,.15,1) both;
+ 	> g {
+		animation: hero-ken-burns-backwards $timing cubic-bezier(.1,.49,.15,1) both;
+		transform-origin: center center;
+	}
+}
+
+#inner {
+	@include transform-thing(2);
+}
+#r1 {
+	@include transform-thing(2);
+}
+#r2 {
+	@include transform-thing(3);
+}
+#r3 {
+	@include transform-thing(4);
+}
+#r4 {
+	@include transform-thing(5);
+}
+#r5 {
+	@include transform-thing(6);
+}
+#r6 {
+	@include transform-thing(7);
+}
+#r7 {
+	@include transform-thing(8);
+}
+#r8 {
+	@include transform-thing(9);
+}
+
+
+@keyframes hero-ken-burns {
+	0% {
+		transform: scale(.9) rotate(5deg);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes hero-ken-burns-backwards {
+	0% {
+		transform: scale(.5) rotate(-5deg);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
