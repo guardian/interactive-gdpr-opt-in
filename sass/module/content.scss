@@ -57,7 +57,7 @@
 	font-weight: 700;
 }
 
-@media (min-width: $mq-desktop) {
+@media (min-width: $mq-collapse-columns) {
 	.oi-content .gs-container {
 		display: flex;
 		.oi-content__header {
@@ -83,7 +83,7 @@
 }
 
 .oi-content-cta {
-	@media (min-width: $mq-desktop) {
+	@media (min-width: $mq-collapse-columns) {
 		display: flex;
 		.oi-content-cta__icon {
 			flex: 0 0 auto;
@@ -103,7 +103,7 @@
 		height: 50%;
 		width: 50%;
 	}
-	@media (min-width: $mq-desktop) {
+	@media (min-width: $mq-collapse-columns) {
 		border: 1px solid;
 		height: $size-button-height;
 		width: $size-button-height;

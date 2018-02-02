@@ -11,7 +11,7 @@
 	margin:0 !important
 }
 
-.l-footer{
+.l-footer {
 	display:block!important;
 	position:relative;
 }
@@ -21,6 +21,10 @@
 	line-height: 1.25;
 }
 
-.oi-wrap {
-	padding: 0 $gs-gutter / 3;
+.oi-wrap .gs-container {
+	padding: 0 $gs-gutter / 2;
+	@media (min-width: $mq-tablet){
+		padding: 0 $gs-gutter;
+	}
+	box-sizing: border-box;
 }

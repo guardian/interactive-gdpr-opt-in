@@ -29,7 +29,7 @@
 			width: 100%;
 		}
 	}
-	@media (min-width: $mq-desktop) {
+	@media (min-width: $mq-collapse-columns) {
 		margin-left: gs-span(3) + $gs-gutter*2;
 		.oi-hero__title {
 			text-align: left;

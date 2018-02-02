@@ -95,7 +95,7 @@ $colour-faq: $colour-purple-dark;
 	.oi-cta--paragraph {
 		padding-left: 0;;
 	}
-	@media (min-width: $mq-desktop) {
+	@media (min-width: $mq-collapse-columns) {
 		display: flex;
 		align-items: flex-start;
 		.oi-cta {
