@@ -1,9 +1,8 @@
 $expandy-size: 2.75rem;
-$colour-faq: $colour-purple-dark;
 
 .oi-faq__wrap {
 	.oi-faq {
-		margin-bottom: $gs-baseline / 1.5;
+		margin-bottom: $gs-baseline / 2;
 	}
 }
 
@@ -18,12 +17,11 @@ $colour-faq: $colour-purple-dark;
 		display:none;
 	}
 	&[open] {
-		@include multiline(4, $colour-purple-dark)
-		background-color: #fff;
-		border-color: $colour-purple;
+		@include multiline(4, $colour-neutral-2)
+		border-color: $colour-faq-alt;
 	}
-	background: $colour-purple;
-	border-top: 1px solid $colour-faq;
+	background-color: #fff;
+	border-top: 1px solid $colour-neutral-2;
 }
 
 .oi-faq__header,
@@ -32,24 +30,33 @@ $colour-faq: $colour-purple-dark;
 		$gs-baseline/2
 		$gs-baseline/2
 		$gs-baseline
-		$gs-baseline/2 + $expandy-size + $gs-baseline/1.5
+		$gs-baseline/2 + $expandy-size + $gs-baseline/2
 }
 
 .oi-faq__header {
-	font-size: $font-size-subtitle;
-	font-family: $font-egyptian;
-	line-height: 1.2;
-	font-weight: bold;
 	position: relative;
 	color: $colour-faq;
 	min-height: $expandy-size;
 	cursor: pointer;
-	max-width: gs-span(3);
+	display: flex;
+	align-items: center;
+	h3 {
+		font-size: $font-size-subtitle;
+		font-family: $font-egyptian;
+		line-height: 1.2;
+		font-weight: bold;
+		margin: 0;
+		max-width: gs-span(3);
+	}
+	.oi-faq[open] & {
+		color: $colour-faq-alt;
+	}
 	&:hover, &:focus {
 		text-decoration: underline;
 	}
 	figure {
 		content: '';
+		box-sizing: border-box;
 		width: $expandy-size;
 		height: $expandy-size;
 		position: absolute;
@@ -85,8 +92,9 @@ $colour-faq: $colour-purple-dark;
 	}
 	.oi-faq[open] & figure {
 		background-color: transparent;
+		border-color: $colour-faq-alt;
 		svg * {
-			fill: $colour-faq;
+			fill: $colour-faq-alt;
 		}
 		svg:nth-child(1) {
 			display: none;

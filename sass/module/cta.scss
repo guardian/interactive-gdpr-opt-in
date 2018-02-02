@@ -40,11 +40,12 @@
 		cursor: default;
 	}
 	&.oi-cta--primary {
-		color: $colour-black;
-		background: $colour-yellow;
+		color: #fff;
+		background: $colour-green-dark;
+		border-color: $colour-green;
 		&:hover, &:focus {
-			color: $colour-black;
-			background: darken($colour-yellow,5%);
+			border-color: darken($colour-green-dark,5%);
+			background: darken($colour-green-dark,5%);
 		}
 	}
 	&.oi-cta--secondary {
@@ -63,6 +64,10 @@
 		&:hover, &:focus {
 			background: $colour-purple-dark;
 		}
+	}
+
+	&.oi-cta--text-cream {
+		color: $colour-cream;
 	}
 }
 

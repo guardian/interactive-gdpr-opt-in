@@ -1,6 +1,8 @@
 .oi-hero {
 	overflow: hidden;
-	background: $colour-neutral-light;
+	background: $colour-neutral-1;
+	border-bottom: 1px solid rgba(0,0,0,.25);
+	contain: layout style paint
 }
 
 .oi-hero__wrapper {
@@ -101,7 +103,7 @@
 
 @keyframes hero-ken-burns {
 	0% {
-		transform: scale(.9) rotate(5deg);
+		transform: scale(.9) rotate(8deg);
 	}
 	100% {
 		transform: scale(1);
@@ -111,7 +113,7 @@
 
 @keyframes hero-ken-burns-backwards {
 	0% {
-		transform: scale(.5) rotate(-5deg);
+		transform: scale(.5) rotate(-8deg);
 	}
 	100% {
 		transform: scale(1);
