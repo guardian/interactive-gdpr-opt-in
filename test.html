@@ -1,20 +1,10 @@
 <meta name="viewport" content="width=device-width">
-<thingaling></thingaling>
+<gu-header></gu-header>
+<x-thingaling></x-thingaling>
 <script src="https://assets.guim.co.uk/polyfill.io/v2/polyfill.min.js?rum=0&features=es6,es7,es2017,default-3.6,HTMLPictureElement,IntersectionObserver,IntersectionObserverEntry&flags=gated&callback=guardianPolyfilled&unknown=polyfill"></script>
 <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch,Promise"></script>
 <script>
-fetch("public/main.html")
-  .then(function(response) {
-    return response.text();
-  })
-  .then(function(html) {
-    document.querySelector("thingaling").innerHTML = html;
-    var $script = document.createElement("script");
-    $script.src = "/public/main.js";
-    document.body.appendChild($script);
-  });
-
-var addCss = function addCss(url) {
+var addCss = function(url) {
   var node = document.createElement("link");
   node.type = "text/css";
   node.rel = "stylesheet";
@@ -22,6 +12,28 @@ var addCss = function addCss(url) {
 
   document.body.appendChild(node);
 };
+
+var addHtml = function(url,$target) {
+    return fetch(url)
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(html) {
+          $target.innerHTML = html;
+        });
+}
+
+Promise.all([
+    ["etc/gu.head.html",document.querySelector("gu-header")],
+    ["public/main.html",document.querySelector("x-thingaling")],
+].map(function(item){
+    return addHtml(item[0], item[1])
+}))
+.then(function(html) {
+  var $script = document.createElement("script");
+  $script.src = "/public/main.js";
+  document.body.appendChild($script);
+});
 
 ["public/main.css", "etc/gu.css", "etc/gu-fonts.css"].forEach(addCss);
 </script>
