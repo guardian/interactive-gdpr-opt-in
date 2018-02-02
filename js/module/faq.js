@@ -56,8 +56,6 @@ const inject = ($element) => {
 		}
 	});
 
-	console.log(hasNativeDetails());
-
 	if(!hasNativeDetails()) {
 		$summary.addEventListener('click', ev => {
 			$element.getAttribute('open') !== null
