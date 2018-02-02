@@ -3,5 +3,6 @@ module.exports = {
     require('postcss-import'),
     require('@csstools/postcss-sass'),
     require('autoprefixer'),
+    require('postcss-clean'),
   ]
 }
