@@ -39,15 +39,13 @@ $expandy-size: 2.75rem;
 	color: $colour-faq;
 	min-height: $expandy-size;
 	cursor: pointer;
-	display: flex;
-	align-items: center;
 	h3 {
 		font-size: $font-size-subtitle;
 		font-family: $font-egyptian;
-		line-height: 1.2;
+		line-height: $expandy-size/2;
 		font-weight: bold;
 		margin: 0;
-		max-width: gs-span(3);
+		max-width: gs-span(5);
 	}
 	.oi-faq[open] & {
 		color: $colour-faq-alt;
@@ -65,9 +63,6 @@ $expandy-size: 2.75rem;
 		left: $gs-baseline/2;
 		border-radius: 100%;
 		border: 1px solid $colour-faq;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		svg {
 			position: absolute;
 			margin: auto;
