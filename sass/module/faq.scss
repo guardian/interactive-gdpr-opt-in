@@ -48,7 +48,7 @@ $colour-faq: $colour-purple-dark;
 	&:hover, &:focus {
 		text-decoration: underline;
 	}
-	i {
+	figure {
 		content: '';
 		width: $expandy-size;
 		height: $expandy-size;
@@ -61,19 +61,38 @@ $colour-faq: $colour-purple-dark;
 		align-items: center;
 		justify-content: center;
 		svg {
+			position: absolute;
+			margin: auto;
+		}
+		svg:nth-child(1) {
 			transform: scale(1.25);
 		}
+		svg:nth-child(2) {
+			transform: scale(.95);
+		}
 	}
-	.oi-faq & i {
+	.oi-faq & figure {
 		background-color: $colour-faq;
 		svg * {
 			fill: #fff;
 		}
+		svg:nth-child(1) {
+			display: block;
+		}
+		svg:nth-child(2) {
+			display: none;
+		}
 	}
-	.oi-faq[open] & i {
+	.oi-faq[open] & figure {
 		background-color: transparent;
 		svg * {
 			fill: $colour-faq;
+		}
+		svg:nth-child(1) {
+			display: none;
+		}
+		svg:nth-child(2) {
+			display: block;
 		}
 	}
 }
