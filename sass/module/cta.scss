@@ -15,9 +15,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: $size-button-height;
 	box-sizing: border-box;
 	contain: layout style paint;
+	height: $size-button-height * .85;
+	@media (min-width: $mq-tablet) {
+		height: $size-button-height;
+	}
 	svg {
 		vertical-align: middle;
 		transform: scale(1.125) translateX(.5em);

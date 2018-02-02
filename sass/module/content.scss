@@ -14,6 +14,7 @@
 	background: $bg;
 	color: get-text-color($bg);
 	.oi-content__body,
+	.oi-content__header,
 	.oi-content-cta__icon {
 		border-color: transparentize($lines, .5);
 	}
@@ -47,10 +48,17 @@
 
 .oi-content__header {
 	font-family: $font-egyptian;
-	font-size: $font-size-title;
+	font-size: $font-size-title-phone;
 	line-height: 1;
-	padding: $gs-gutter/4 0 $gs-gutter;
+	padding: $gs-gutter/4 0 0;
+	margin-bottom: $gs-gutter;
 	font-weight: 700;
+	@media (max-width: $mq-collapse-columns) {
+		border-left-style: solid;
+		border-left-width: 1px;
+		padding-left: $gs-gutter / 3;
+		max-width: gs-span(2.5);
+	}
 }
 
 @media (min-width: $mq-collapse-columns) {
@@ -61,6 +69,7 @@
 			flex: 0 0 auto;
 			padding-right: $gs-gutter;
 			padding-left: 0;
+			font-size: $font-size-title;
 		}
 		.oi-content__body {
 			padding-top: $gs-gutter / 2;
