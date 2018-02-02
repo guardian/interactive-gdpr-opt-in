@@ -61,7 +61,6 @@
 
 @mixin transform-thing($id) {
 	$timing: $id * 10s;
-	transform: scale(1.1);
 	transform-origin: center center;
 	animation: hero-ken-burns $timing cubic-bezier(.1,.49,.15,1) both;
  	> g {
@@ -70,34 +69,35 @@
 	}
 }
 
-#inner {
-	@include transform-thing(2);
+.oi-hero {
+	.__svg__-inner {
+		@include transform-thing(2);
+	}
+	.__svg__-r1 {
+		@include transform-thing(2);
+	}
+	.__svg__-r2 {
+		@include transform-thing(3);
+	}
+	.__svg__-r3 {
+		@include transform-thing(4);
+	}
+	.__svg__-r4 {
+		@include transform-thing(5);
+	}
+	.__svg__-r5 {
+		@include transform-thing(6);
+	}
+	.__svg__-r6 {
+		@include transform-thing(7);
+	}
+	.__svg__-r7 {
+		@include transform-thing(8);
+	}
+	.__svg__-r8 {
+		@include transform-thing(9);
+	}
 }
-#r1 {
-	@include transform-thing(2);
-}
-#r2 {
-	@include transform-thing(3);
-}
-#r3 {
-	@include transform-thing(4);
-}
-#r4 {
-	@include transform-thing(5);
-}
-#r5 {
-	@include transform-thing(6);
-}
-#r6 {
-	@include transform-thing(7);
-}
-#r7 {
-	@include transform-thing(8);
-}
-#r8 {
-	@include transform-thing(9);
-}
-
 
 @keyframes hero-ken-burns {
 	0% {
