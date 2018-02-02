@@ -14,6 +14,12 @@
 .l-footer {
 	display:block!important;
 	position:relative;
+	.footer__primary {
+		overflow: visible;
+		.subnav {
+			display: none;
+		}
+	}
 }
 
 .oi {
