@@ -1,6 +1,6 @@
 import {inject as injectFaq} from './module/faq';
-//import {inject as injectFaqFooter} from './module/faq-footer';
-import {inject as injectFaqMore} from './module/faq-more';
+import {inject as injectFaqFooter} from './module/faq-footer';
+//import {inject as injectFaqMore} from './module/faq-more';
 //import {inject as injectResend} from './module/resend-widget';
 
 const injectables = [
