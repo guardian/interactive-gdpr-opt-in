@@ -42,10 +42,10 @@ const inject = ($element) => {
 			if($element.getAttribute('open') !== null) {
 				const targetHeight = $details.clientHeight * 1.1;
 				$details.style.visibility = 'visible';
-				$details.style.maxHeight = padding;
+				$details.style.maxHeight = `${padding}px`;
 				$details.style.position = 'relative';
 				requestAnimationFrame(()=>{
-					$details.style.maxHeight = targetHeight;
+					$details.style.maxHeight = `${targetHeight}px`;
 				});
 				$details.addEventListener('transitionend',cleanupAfterAnim)
 			}

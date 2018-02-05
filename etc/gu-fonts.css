@@ -13,6 +13,12 @@
 @font-face {
   font-family: "Guardian Egyptian Web";
   src:
+    url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Black.woff") format("woff");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Guardian Egyptian Web";
+  src:
     url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Bold.woff") format("woff");
   font-weight: 600;
 }
