@@ -54,6 +54,9 @@
 }
 
 .oi-content__body {
+	.oi-content--endcap & {
+		padding-top: $paragraph-spacing * 2!important;
+	}
 	padding-bottom: $paragraph-spacing * 2;
 	.oi-content__body-wrap > * {
 		margin-bottom: $paragraph-spacing;
