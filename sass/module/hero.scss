@@ -3,6 +3,7 @@
 	background: $colour-neutral-1;
 	border-bottom: 1px solid rgba(0,0,0,.25);
 	contain: layout style paint;
+	width: 100%;
 }
 
 .oi-hero__wrapper {
@@ -20,18 +21,21 @@
 	.oi-hero__bg-container {
 		position: absolute;
 		z-index: 9;
-		left: -150%;
-		width: 400%;
+		left: -200%;
+		right: -200%;
 		height: 400%;
 		top: -150%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		margin: auto;
 		contain: strict;
 		figure {
 			display: block;
 			margin: auto;
-			position: relative;
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
 			width: 1960px;
 			height: 680px;
 			transform: scale(.6);
@@ -58,17 +62,20 @@
 			}
 		}
 	}
-	@media (min-width: $mq-collapse-columns) {
-		margin-left: gs-span(3) + $gs-gutter*2;
-		.oi-hero__title {
-			text-align: left;
-			h1 {
-				float: left;
+	@supports (transition: 1s) {
+		@media (min-width: $mq-collapse-columns) {
+			margin-left: gs-span(3) + $gs-gutter*2;
+			.oi-hero__title {
+				text-align: left;
+				h1 {
+					float: left;
+				}
 			}
-		}
-		.oi-hero__bg-container {
-			left: -56rem;
-			width: auto;
+			.oi-hero__bg-container {
+				left: -56rem;
+				right: 0;
+				width: auto;
+			}
 		}
 	}
 }
@@ -104,33 +111,35 @@
 	}
 }
 
-.oi-hero {
-	.__svg__-r0 {
-		@include transform-outer(2);
-	}
-	.__svg__-r1 {
-		@include transform-thing(2);
-	}
-	.__svg__-r2 {
-		@include transform-thing(3);
-	}
-	.__svg__-r3 {
-		@include transform-thing(4);
-	}
-	.__svg__-r4 {
-		@include transform-thing(5);
-	}
-	.__svg__-r5 {
-		@include transform-thing(6);
-	}
-	.__svg__-r6 {
-		@include transform-thing(7);
-	}
-	.__svg__-r7 {
-		@include transform-thing(8);
-	}
-	.__svg__-r8 {
-		@include transform-thing(9);
+@supports (transition: 1s) {
+	.oi-hero {
+		.__svg__-r0 {
+			@include transform-outer(2);
+		}
+		.__svg__-r1 {
+			@include transform-thing(2);
+		}
+		.__svg__-r2 {
+			@include transform-thing(3);
+		}
+		.__svg__-r3 {
+			@include transform-thing(4);
+		}
+		.__svg__-r4 {
+			@include transform-thing(5);
+		}
+		.__svg__-r5 {
+			@include transform-thing(6);
+		}
+		.__svg__-r6 {
+			@include transform-thing(7);
+		}
+		.__svg__-r7 {
+			@include transform-thing(8);
+		}
+		.__svg__-r8 {
+			@include transform-thing(9);
+		}
 	}
 }
 
