@@ -8,10 +8,15 @@ $colour-purple-dark: #7d0068;
 $colour-cream: #eacca0;
 $colour-cream-dark: #6b5741;
 $colour-yellow: #FFE300;
-$colour-green: #759c84;
+$colour-green: #008E89;
 $colour-green-dark: #006d68;
-$colour-blue: #00b2ff;
+$colour-blue: #008FD7;
 $colour-blue-dark: #005689;
+
+$colour-blue-alt: #57BBD4;
+
+$colour-orange: #FF4E36;
+
 
 $colour-error: #e00000;
 $colour-neutral-1: #f6f6f6;
@@ -20,20 +25,20 @@ $colour-neutral-7: #333333;
 $colour-neutral-8: #121212;
 
 $colour-text: $colour-neutral-7;
-$colour-faq: $colour-blue-dark;
-$colour-faq-alt: $colour-blue;
+$colour-faq: $colour-green;
 
 $font-egyptian: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
 $font-serif: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 $font-text: "Guardian Text Egyptian Web",Georgia,serif;
 
+$font-size-title-xl: 4em;
 $font-size-title: 2.285em;
 $font-size-title-phone: 1.715em;
 $font-size-subtitle: 1.285em;
 $font-size-cta: 1.1375em;
 $font-size-small: .875em;
 
-$paragraph-spacing: 1.5em;
+$paragraph-spacing: 1.5rem;
 
 $mq-collapse-columns: 42em;
 $mq-tablet: 30em;

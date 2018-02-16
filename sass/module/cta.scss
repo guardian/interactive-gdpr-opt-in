@@ -45,11 +45,11 @@
 	}
 	&.oi-cta--primary {
 		color: #fff;
-		background: $colour-green-dark;
-		border-color: $colour-green;
+		background: $colour-orange;
+		border-color: $colour-orange;
 		&:hover, &:focus {
-			border-color: darken($colour-green-dark,5%);
-			background: darken($colour-green-dark,5%);
+			border-color: darken($colour-orange,5%);
+			background: darken($colour-orange,5%);
 		}
 	}
 	&.oi-cta--secondary {
@@ -64,9 +64,9 @@
 	}
 	&.oi-cta--secondary--faq {
 		@extend .oi-cta.oi-cta--secondary;
-		color: $colour-faq-alt;
+		color: $colour-faq;
 		&:hover, &:focus {
-			background: $colour-faq-alt;
+			background: $colour-faq;
 		}
 	}
 

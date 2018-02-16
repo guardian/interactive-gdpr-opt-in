@@ -1,5 +1,8 @@
+$colour-content-border: $colour-neutral-2;
+
 .oi-content {
 	overflow: hidden;
+	border-top: 1px solid $colour-content-border;
 }
 
 @function get-text-color($color) {
@@ -10,53 +13,37 @@
 	}
 }
 
-@mixin oi-content-tone($bg, $text, $lines:$text) {
+@mixin oi-content-tone($bg, $text, $border: $text) {
 	background: $bg;
 	color: get-text-color($bg);
-	.oi-content__body p strong {
-		background: $lines;
-		color: $bg;
-	}
-	.oi-content__body,
-	.oi-content__header,
-	.oi-content-cta__icon {
-		border-color: transparentize($lines, .5);
-	}
 	.oi-content__header {
 		color: $text;
 	}
-	.oi-content-cta__icon {
-		background: $lines;
-		color: $bg;
-	}
-	.oi-content-cta--hollow .oi-content-cta__icon {
-		background: $bg;
-		color: $lines;
+	.oi-content__body-wrap {
+		border-color: $border;
 	}
 }
 
 .oi-content--intro {
-	@include oi-content-tone($colour-cream, $colour-cream-dark, $colour-green-dark)
+	@include oi-content-tone(#fff, $colour-blue)
 }
 
 .oi-content--faq {
-	@include oi-content-tone($colour-neutral-1, $colour-blue-dark, $colour-blue)
+	@include oi-content-tone($colour-neutral-1, $colour-green)
 }
 
 .oi-content--outro {
-	@include oi-content-tone(#fff, currentColor, $colour-green-dark)
+	@include oi-content-tone(#fff, $colour-blue-dark)
 }
 
-.oi-content--with-segue {
-	.oi-content__body {
-		padding-bottom: 0;
-	}
+.oi-content--with-ml {
+	@include multiline(4, $colour-neutral-2, top)
+	padding-top: multiline-height(4);
+	border-top: 0;
+
 }
 
 .oi-content__body {
-	.oi-content--endcap & {
-		padding-top: $paragraph-spacing * 2!important;
-	}
 	padding-bottom: $paragraph-spacing * 2;
 	.oi-content__body-wrap > * {
 		margin-bottom: $paragraph-spacing;
@@ -69,82 +56,68 @@
 .oi-content__header {
 	font-family: $font-egyptian;
 	font-size: $font-size-title-phone;
-	line-height: 1;
-	padding: $gs-gutter/4 0 0;
-	margin-bottom: $gs-gutter;
-	font-weight: 900;
+	line-height: .95;
+	font-weight: 700;
+	letter-spacing: -.01em;
 	@media (max-width: $mq-collapse-columns) {
 		border-left-style: solid;
 		border-left-width: 1px;
 		padding-left: $gs-gutter / 3;
+		padding-top: $gs-gutter/4;
 		max-width: gs-span(2.5);
 		font-weight: 700;
+		margin-bottom: $gs-gutter;
+		&:empty {
+			display: none;
+		}
 	}
 }
 
 @media (min-width: $mq-collapse-columns) {
 	.oi-content .gs-container {
 		display: flex;
-		.oi-content__header {
+		> .oi-content__header {
 			width: gs-span(3);
 			flex: 0 0 auto;
 			padding-right: $gs-gutter;
 			padding-left: 0;
 			font-size: $font-size-title;
+			position: relative;
+			display: block;
+			z-index: 9;
+			margin-bottom: $gs-gutter;
+			padding-top: $gs-gutter / 4;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				height: 2em;
+				right: 0;
+				background: $colour-content-border;
+				display: block;
+				width: 1px;
+			}
 		}
-		.oi-content__body {
-			padding-top: $gs-gutter / 2;
-			padding-left: $gs-gutter;
+		> .oi-content__body {
 			flex: 1 1 0;
-			border-left-style: solid;
-			border-left-width: 1px;
+			z-index: 10;
+			.oi-content__header {
+				font-size: $font-size-title-xl;
+				font-weight: 900;
+			}
 			.oi-content__body-wrap {
-				max-width: gs-span(8);
+				max-width: gs-span(6);
+				padding-top: $gs-gutter / 2;
+				padding-left: $gs-gutter / 2;
+				margin-left: -1px;
+				&.oi-content__body-wrap--lined {
+					border-left-style: solid;
+					border-left-width: 1px;
+				}
 			}
 			.oi-content-cta {
-				margin-left: ($size-button-height/4 + $gs-gutter + .0625) * -1;
+				margin-left: $gs-gutter * -1;
 			}
 		}
-	}
-}
-
-.oi-content-cta {
-	@media (min-width: $mq-collapse-columns) {
-		display: flex;
-		&.oi-content-cta--hollow {
-			margin: -$paragraph-spacing 0 0;
-			.oi-content-cta__icon {
-				margin-top: $gs-gutter / 2;
-			}
-		}
-		.oi-content-cta__icon {
-			flex: 0 0 auto;
-			margin-right: $gs-baseline;
-			margin-top: ($size-button-height - ($size-button-height/2))/2;
-		}
-		.oi-content-cta__content {
-			width: 100%;
-		}
-	}
-}
-.oi-content-cta__icon {
-	display: none;
-	box-sizing: border-box;
-	svg * {
-		fill: currentColor;
-	}
-	svg {
-		height: 50%;
-		width: 50%;
-	}
-	@media (min-width: $mq-collapse-columns) {
-		height: $size-button-height/2;
-		width: $size-button-height/2;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 100%;
-		border-style: solid;
-		border-width: 1px;
 	}
 }

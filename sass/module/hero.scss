@@ -1,163 +1,91 @@
 .oi-hero {
 	overflow: hidden;
-	background: $colour-neutral-1;
-	border-bottom: 1px solid rgba(0,0,0,.25);
-	contain: layout style paint;
+	background: #fff;
+	contain: strict;
 	width: 100%;
+	height: 300px;
+	position: relative;
+	.oi-hero__bg {
+		top: -50px;
+	}
+	.oi-hero__wrapper {
+		transform: scale(.8);
+	}
+}
+
+.oi-hero h1 {
+	font-family: $font-egyptian;
+	font-size: $font-size-title-xl;
+	font-weight: 900;
+	background: $colour-blue url(/public/assets/stay-with-us.svg) 50% 45% no-repeat;
+	background-size: 80%;
+	display: flex;
+	width: 280px;
+	height: 280px;
+	padding: 40px;
+	position: absolute;
+	color: #fff;
+	z-index: 10;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 100%;
 }
 
 .oi-hero__wrapper {
+	position: absolute;
+	width: 600%;
+	left: -250%;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	z-index: 9;
+}
+
+.oi-hero__wrapper svg {
+	margin: auto;
+}
+
+.oi-hero__bg {
+	margin: auto;
+	width: 1200px;
 	position: relative;
-	.oi-hero__title {
-		position: relative;
-		z-index: 10;
-		text-align: center;
-		padding: 5em 0;
-		margin: auto;
-		h1 {
-			margin: auto;
-		}
-	}
-	.oi-hero__bg-container {
-		position: absolute;
-		z-index: 9;
-		left: -200%;
-		right: -200%;
-		height: 400%;
-		top: -150%;
-		margin: auto;
-		contain: strict;
-		figure {
-			display: block;
-			margin: auto;
-			position: absolute;
-			margin: auto;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			width: 1960px;
-			height: 680px;
-			transform: scale(.6);
-		}
-		.__svg__-container {
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-		}
-		.__svg__-container > div {
-			width: 60px;
-			height: 60px;
-			position: absolute;
-			border-radius: 100%;
-			background: url(/public/assets/tick.svg) center center no-repeat;
-			&.__svg__-big-circle {
-				width: 456px;
-				height: 456px;
-				background-image: none;
-			}
-		}
-	}
-	@supports (transition: 1s) {
-		@media (min-width: $mq-collapse-columns) {
-			margin-left: gs-span(3) + $gs-gutter*2;
-			.oi-hero__title {
-				text-align: left;
-				h1 {
-					float: left;
-				}
-			}
-			.oi-hero__bg-container {
-				left: -56rem;
-				right: 0;
-				width: auto;
-			}
-		}
-	}
+	height: 400px;
 }
 
-.oi-hero__title {
-	color: #fff;
-	overflow: hidden;
-	h1 {
-		font-size: 3em;
-		font-family: $font-egyptian;
-		width: 4em;
-		font-weight: 600;
-		line-height: 1;
-	}
-}
-
-@mixin transform-outer($id) {
-	$timing: $id * 10s;
-	will-change: transform;
-	transform-origin: 980px 340px;
-	animation: hero-ken-burns $timing cubic-bezier(.1,.49,.15,1) both;
+.oi-hero__bg > div {
+	width: 600px;
+	height: 200px;
+	left: 600px;
+	top: 200px;
+	position: relative;
 	overflow: visible;
 }
 
-@mixin transform-thing($id) {
-	$timing: $id * 10s;
-	@include transform-outer(2);
- 	> div {
-		contain: strict;
-		will-change: transform;
-		animation: hero-ken-burns-backwards $timing cubic-bezier(.1,.49,.15,1) both;
-		transform-origin: center center;
-	}
-}
+.oi-hero__bg > div > figure {
+	width: 46px;
+	height: 46px;
+	position: absolute;
+	border-radius: 100%;
+	background: url(/public/assets/tick.svg) center center no-repeat;
+	background-size: 50%;
 
-@supports (transition: 1s) {
-	.oi-hero {
-		.__svg__-r0 {
-			@include transform-outer(2);
-		}
-		.__svg__-r1 {
-			@include transform-thing(2);
-		}
-		.__svg__-r2 {
-			@include transform-thing(3);
-		}
-		.__svg__-r3 {
-			@include transform-thing(4);
-		}
-		.__svg__-r4 {
-			@include transform-thing(5);
-		}
-		.__svg__-r5 {
-			@include transform-thing(6);
-		}
-		.__svg__-r6 {
-			@include transform-thing(7);
-		}
-		.__svg__-r7 {
-			@include transform-thing(8);
-		}
-		.__svg__-r8 {
-			@include transform-thing(9);
-		}
+	&[data-colour="1"] {
+		background-color: $colour-blue;
 	}
-}
-
-@keyframes hero-ken-burns {
-	0% {
-		transform: scale(.9) rotate(8deg);
+	&[data-colour="2"] {
+		background-color: $colour-orange;
 	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
+	&[data-colour="3"] {
+		background-color: $colour-green;
 	}
-}
-
-@keyframes hero-ken-burns-backwards {
-	0% {
-		transform: scale(.5) rotate(-8deg);
-	}
-	100% {
-		transform: scale(1);
+	&[data-colour="0"] {
+		background-color: $colour-blue-alt;
 	}
 }

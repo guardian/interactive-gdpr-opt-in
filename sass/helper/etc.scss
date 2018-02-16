@@ -20,8 +20,13 @@
 	@include u-h;
 }
 
+@function multiline-height($number) {
+	@return $number * 4 - 3;
+}
+
 @mixin multiline($number, $color, $position: bottom) {
-	$bgSize: $number * 4 - 3;
+
+	$bgSize: multiline-height($number);
 
 	background-image: repeating-linear-gradient(to bottom, $color, $color 1px, transparent 1px, transparent 4px);
 	background-repeat: repeat-x;

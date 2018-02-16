@@ -19,7 +19,7 @@ $expandy-size: 2.75rem;
 	}
 	&[open] {
 		@include multiline(4, $colour-neutral-2)
-		border-color: $colour-faq-alt;
+		border-color: $colour-faq;
 	}
 	background-color: #fff;
 	border-top: 1px solid $colour-neutral-2;
@@ -48,7 +48,7 @@ $expandy-size: 2.75rem;
 		max-width: gs-span(5);
 	}
 	.oi-faq[open] & {
-		color: $colour-faq-alt;
+		color: $colour-faq;
 	}
 	&:hover, &:focus {
 		text-decoration: underline;
@@ -92,9 +92,9 @@ $expandy-size: 2.75rem;
 	}
 	.oi-faq[open] & figure {
 		background-color: transparent;
-		border-color: $colour-faq-alt;
+		border-color: $colour-faq;
 		svg * {
-			fill: $colour-faq-alt;
+			fill: $colour-faq;
 		}
 		svg:nth-child(1) {
 			display: none;

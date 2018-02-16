@@ -1,9 +1,9 @@
 const VOTE_YAY = 'helpful';
 const VOTE_NAY = 'useless';
 
-const TEXT_YAY = 'That was helpful';
-const TEXT_NAY = 'That was useless';
-const TEXT_TKS = 'Thank you for the feedback!';
+const TEXT_YAY = `That was useful`;
+const TEXT_NAY = `I don't understand`;
+const TEXT_TKS = `Thank you for the feedback!`;
 
 const makeVoteButton = (type, title) => {
 	const $button = document.createElement('button');
