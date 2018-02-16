@@ -57,7 +57,7 @@ $colour-content-border: $colour-neutral-2;
 	font-family: $font-egyptian;
 	font-size: $font-size-title-phone;
 	line-height: .95;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: -.01em;
 	@media (max-width: $mq-collapse-columns) {
 		border-left-style: solid;
@@ -91,7 +91,7 @@ $colour-content-border: $colour-neutral-2;
 				content: '';
 				position: absolute;
 				top: 0;
-				height: 2em;
+				height: 2rem;
 				right: 0;
 				background: $colour-content-border;
 				display: block;
@@ -110,6 +110,9 @@ $colour-content-border: $colour-neutral-2;
 				padding-top: $gs-gutter / 2;
 				padding-left: $gs-gutter / 2;
 				margin-left: -1px;
+				&.oi-content__body-wrap--l {
+					max-width: gs-span(7);
+				}
 				&.oi-content__body-wrap--lined {
 					border-left-style: solid;
 					border-left-width: 1px;
@@ -117,6 +120,7 @@ $colour-content-border: $colour-neutral-2;
 			}
 			.oi-content-cta {
 				margin-left: $gs-gutter * -1;
+				margin-right: $gs-gutter * -1;
 			}
 		}
 	}
