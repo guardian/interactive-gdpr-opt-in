@@ -73,7 +73,7 @@
 	height: 46px;
 	position: absolute;
 	border-radius: 100%;
-	background: url(/public/assets/tick.svg) center center no-repeat;
+	background: $colour-text url(/public/assets/tick.svg) center center no-repeat;
 	background-size: 50%;
 
 	&[data-colour="1"] {

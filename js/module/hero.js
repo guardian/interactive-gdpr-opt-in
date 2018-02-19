@@ -1,6 +1,6 @@
 import {select} from 'd3-selection';
 import {range} from 'd3-array';
-import {forceSimulation, forceCollide, forceRadial, forceCenter, forceManyBody} from 'd3-force'
+import {forceSimulation, forceCollide, forceRadial, forceX, forceY, forceManyBody} from 'd3-force'
 
 const radius = 23;
 const startRadius = 1000;
@@ -18,6 +18,7 @@ const inject = ($element) => {
 	const nodes = [
 		...range(120).map(function(f) { return {
 			radius: radius,
+			weight: 0.06,
 			colour: f%colours.length
 		}; }),
 		{
@@ -27,6 +28,10 @@ const inject = ($element) => {
 			fy: 0
 		}
 	]
+
+	nodes[30].weight = 0.045;
+
+	console.log(nodes);
 
 	const node = select($element.querySelector('.oi-hero__bg'))
 		.append("div")
@@ -43,9 +48,10 @@ const inject = ($element) => {
 		range(30).map(simulation.tick);
 		simulation
 			.force('charge', forceManyBody().strength(1))
-			.force('collision', forceCollide().radius(d => d.radius+1))
-			.force('center', forceCenter())
-			.force("r", forceRadial(endRadius))
+			.force('collision', forceCollide().strength(1).radius(d => d.radius+.5))
+			.force('x', forceX(0).strength(d => d.weight))
+			.force('y', forceY(0).strength(d => d.weight))
+			.force("r", null)
 			.on("tick", ticked);
 
 	function ticked() {
