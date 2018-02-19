@@ -9,7 +9,10 @@
 		top: -50px;
 	}
 	.oi-hero__wrapper {
-		transform: scale(.8);
+		transform: scale(.6);
+		@media (min-width: $mq-tablet){
+			transform: scale(.8);
+		}
 	}
 }
 
