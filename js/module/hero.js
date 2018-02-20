@@ -16,9 +16,14 @@ const colours = [
 const inject = ($element) => {
 
 	const nodes = [
-		...range(120).map(function(f) { return {
+		...range(80).map(function(f) { return {
 			radius: radius,
 			weight: 0.06,
+			colour: f%colours.length
+		}; }),
+		...range(50).map(function(f) { return {
+			radius: radius,
+			weight: Math.random()*0.05 + 0.01,
 			colour: f%colours.length
 		}; }),
 		{
@@ -29,6 +34,7 @@ const inject = ($element) => {
 		}
 	]
 
+	/*1 cheeky little node*/
 	nodes[30].weight = 0.045;
 
 	console.log(nodes);
