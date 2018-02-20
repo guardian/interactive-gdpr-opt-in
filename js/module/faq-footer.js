@@ -8,7 +8,7 @@ const TEXT_TKS = `Thank you for the feedback!`;
 const makeVoteButton = (type, title) => {
 	const $button = document.createElement('button');
 	$button.className = 'oi-cta oi-cta--secondary--faq';
-	$button.dataset.linkName = `optin : ${type} : ${title}`
+	$button.dataset.linkName = `gdpr-oi-campaign : landing : ${type} : ${title}`
 	$button.innerHTML = type === VOTE_YAY
 		? TEXT_YAY
 		: TEXT_NAY
