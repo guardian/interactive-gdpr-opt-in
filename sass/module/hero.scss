@@ -3,13 +3,16 @@
 	background: #fff;
 	contain: strict;
 	width: 100%;
-	height: 300px;
+	height: 180px;
 	position: relative;
+	@media (min-width: $mq-tablet){
+		height: 300px;
+	}
 	.oi-hero__bg {
 		top: -50px;
 	}
 	.oi-hero__wrapper {
-		transform: scale(.6);
+		transform: scale(.45);
 		@media (min-width: $mq-tablet){
 			transform: scale(.8);
 		}
@@ -43,6 +46,7 @@
 .oi-hero__wrapper {
 	position: absolute;
 	width: 600%;
+	height: 300px;
 	left: -250%;
 	margin: auto;
 	top: 0;

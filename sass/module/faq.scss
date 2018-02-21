@@ -41,12 +41,15 @@ $expandy-size: 2.75rem;
 	min-height: $expandy-size;
 	cursor: pointer;
 	h3 {
-		font-size: $font-size-subtitle;
 		font-family: $font-egyptian;
-		line-height: $expandy-size/2;
-		font-weight: 600;
+		font-size: $font-size-cta;
+		line-height: 1.25;
+		font-weight: 500;
 		margin: 0;
 		max-width: gs-span(5);
+		@media (min-width: $mq-collapse-columns) {
+			font-size: $font-size-subtitle;
+		}
 	}
 	.oi-faq[open] & {
 		color: $colour-faq;

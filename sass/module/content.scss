@@ -125,6 +125,10 @@ $colour-content-border: $colour-neutral-2;
 					color: inherit;
 					text-decoration: underline;
 					text-decoration-color: #999;
+					&:hover {
+						color: #000;
+						text-decoration-color: currentColor;
+					}
 				}
 				&.oi-content__body-wrap--l {
 					max-width: gs-span(7);

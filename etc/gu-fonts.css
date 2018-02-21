@@ -23,6 +23,12 @@
   font-weight: 600;
 }
 @font-face {
+  font-family: "Guardian Egyptian Web";
+  src:
+    url("/etc/v0/ascii/GuardianHeadline/GHGuardianHeadline-Semibold.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
   font-family: "Guardian Text Egyptian Web";
   src:
     url("/etc/v0/ascii/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.woff") format("woff");
