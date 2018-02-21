@@ -117,6 +117,7 @@ $expandy-size: 2.75rem;
 	overflow: hidden;
 	& > * {
 		margin-bottom: $paragraph-spacing;
+		margin-right: $gs-gutter;
 	}
 }
 
