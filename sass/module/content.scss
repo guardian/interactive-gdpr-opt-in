@@ -25,7 +25,11 @@ $colour-content-border: $colour-neutral-2;
 }
 
 .oi-content--intro {
-	@include oi-content-tone(#fff, $colour-blue)
+	@include oi-content-tone($colour-neutral-1, $colour-blue)
+}
+
+.oi-content--introette {
+	@include oi-content-tone(#fff, $colour-blue-dark)
 }
 
 .oi-content--faq {
@@ -59,6 +63,12 @@ $colour-content-border: $colour-neutral-2;
 	line-height: .95;
 	font-weight: 600;
 	letter-spacing: -.01em;
+	strong {
+		background: $colour-orange;
+		color: #fff;
+		display: inline-block;
+		padding: .05em .1em .2em;
+	}
 	@media (max-width: $mq-collapse-columns) {
 		border-left-style: solid;
 		border-left-width: 1px;
@@ -101,6 +111,7 @@ $colour-content-border: $colour-neutral-2;
 		> .oi-content__body {
 			flex: 1 1 0;
 			z-index: 10;
+
 			.oi-content__header {
 				font-size: $font-size-title-xl;
 				font-weight: 900;
@@ -110,6 +121,11 @@ $colour-content-border: $colour-neutral-2;
 				padding-top: $gs-gutter / 2;
 				padding-left: $gs-gutter / 2;
 				margin-left: -1px;
+				p a {
+					color: inherit;
+					text-decoration: underline;
+					text-decoration-color: #999;
+				}
 				&.oi-content__body-wrap--l {
 					max-width: gs-span(7);
 				}
