@@ -112,6 +112,7 @@ $colour-content-border: $colour-neutral-2;
 			.oi-content__header {
 				font-size: $font-size-title-xl;
 				font-weight: 900;
+				margin-top: $gs-gutter / 4 * -1
 			}
 			.oi-content__body-wrap {
 				max-width: gs-span(6);
