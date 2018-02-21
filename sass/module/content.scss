@@ -38,7 +38,7 @@ $colour-content-border: $colour-neutral-2;
 
 .oi-content--with-ml {
 	@include multiline(4, $colour-neutral-2, top)
-	padding-top: multiline-height(4);
+	padding-top: multiline-height(4) * 1px;
 	border-top: 0;
 
 }
