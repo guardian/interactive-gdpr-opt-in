@@ -126,11 +126,11 @@ $expandy-size: 2.75rem;
 }
 
 .oi-faq__footer {
-	min-height: $gs-gutter * 2;
+	height: $gs-gutter * 2;
+	overflow: visible;
 	display: flex;
 	align-items: flex-start;
 	.oi-cta {
-		margin-bottom: $gs-gutter/4;
 		height: $gs-gutter * 2;
 		font-size: 1em;
 		font-weight: 100;
@@ -147,6 +147,7 @@ $expandy-size: 2.75rem;
 		align-items: stretch;
 		.oi-cta {
 			text-align: center;
+			margin-bottom: $gs-gutter/4;
 			justify-content: center;
 		}
 	}
