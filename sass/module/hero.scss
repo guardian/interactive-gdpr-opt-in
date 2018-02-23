@@ -60,17 +60,17 @@
 }
 
 .oi-hero__bg {
-	margin: auto;
+	margin: auto!important;
 	width: 1200px;
 	position: relative;
 	height: 400px;
 }
 
 .oi-hero__bg > div {
-	width: 600px;
-	height: 200px;
-	left: 600px;
-	top: 200px;
+	width: 50%;
+	height: 50%;
+	left: 50%;
+	top: 50%;
 	position: relative;
 	overflow: visible;
 }
@@ -79,6 +79,7 @@
 	width: 46px;
 	height: 46px;
 	position: absolute;
+	margin: auto;
 	border-radius: 100%;
 	background: $colour-text url(/public/assets/tick.svg) center center no-repeat;
 	background-size: 50%;
