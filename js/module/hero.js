@@ -37,8 +37,6 @@ const inject = ($element) => {
 	/*1 cheeky little node*/
 	nodes[30].weight = 0.045;
 
-	console.log(nodes);
-
 	const node = select($element.querySelector('.oi-hero__bg'))
 		.append("div")
 		.selectAll("circle")
