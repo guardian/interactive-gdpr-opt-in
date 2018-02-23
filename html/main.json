@@ -1,6 +1,6 @@
 {
 	"props": {
-		"href": "https://profile.theguardian.com/consents/staywithus"
+		"href": "https://profile.theguardian.com/consents/staywithus?returnUrl=http://www.theguardian.com"
 	},
 	"faqs": [
 		{
