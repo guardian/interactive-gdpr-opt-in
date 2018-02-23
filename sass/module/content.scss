@@ -45,6 +45,7 @@ $colour-content-border: $colour-neutral-2;
 
 .oi-content__body {
 	padding-bottom: $paragraph-spacing * 2;
+	font-size: $font-size-small;
 	.oi-content__body-wrap > * {
 		margin-bottom: $paragraph-spacing;
 	}
@@ -72,7 +73,7 @@ $colour-content-border: $colour-neutral-2;
 		padding-top: $gs-gutter/4;
 		max-width: gs-span(2.5);
 		font-weight: 700;
-		margin-bottom: $gs-gutter;
+		margin-bottom: $gs-gutter!important;
 		&:empty {
 			display: none;
 		}
@@ -108,7 +109,6 @@ $colour-content-border: $colour-neutral-2;
 			flex: 1 1 0;
 			z-index: 10;
 			line-height: 1.4;
-			font-size: $font-size-small;
 
 			.oi-content__header {
 				font-size: $font-size-title-xl;
