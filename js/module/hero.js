@@ -16,14 +16,14 @@ const colours = [
 const inject = ($element) => {
 
 	const nodes = [
-		...range(80).map(function(f) { return {
+		...range(40).map(function(f) { return {
 			radius: radius,
 			weight: 0.06,
 			colour: f%colours.length
 		}; }),
-		...range(50).map(function(f) { return {
+		...range(25).map(function(f) { return {
 			radius: radius,
-			weight: Math.random()*0.05 + 0.01,
+			weight: Math.random()*0.04 + 0.02,
 			colour: f%colours.length
 		}; }),
 		{
@@ -45,25 +45,27 @@ const inject = ($element) => {
 			.append("figure")
 			.attr("data-colour", (f)=>f.colour)
 
-	const simulation = forceSimulation([...nodes]);
-		simulation
-			.force("r", forceRadial(startRadius));
-
-		range(30).map(simulation.tick);
-		simulation
-			.force('charge', forceManyBody().strength(1))
-			.force('collision', forceCollide().strength(1).radius(d => d.radius+.5))
-			.force('x', forceX(0).strength(d => d.weight))
-			.force('y', forceY(0).strength(d => d.weight))
-			.force("r", null)
-			.on("tick", ticked);
-
 	function ticked() {
 		node.attr(
 			'style',
 			(d) => `transform: translateY(${d.y-(radius)}px) translateX(${d.x-(radius)}px)`
 		)
 	}
+
+	window.addEventListener('interactive-loaded', () => {
+		const simulation = forceSimulation([...nodes]);
+			simulation
+				.force("r", forceRadial(startRadius));
+
+			range(30).map(simulation.tick);
+			simulation
+				.force('charge', forceManyBody().strength(1))
+				.force('collision', forceCollide().strength(1).radius(d => d.radius+.5))
+				.force('x', forceX(0).strength(d => d.weight))
+				.force('y', forceY(0).strength(d => d.weight))
+				.force("r", null)
+				.on("tick", ticked);
+	})
 
 }
 
