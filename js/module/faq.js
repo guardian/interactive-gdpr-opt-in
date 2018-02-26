@@ -24,9 +24,6 @@ const setAria = ($element, $details, isOpen) => {
 	$details.setAttribute('aria-visible', isOpen);
 }
 
-const hasNativeDetails = () =>
-	typeof [document.createElement('details')][0].open === "boolean"
-
 const inject = ($element) => {
 
 	const $details = $element.querySelector('.oi-faq__details');
@@ -55,14 +52,6 @@ const inject = ($element) => {
 			}
 		}
 	});
-
-	if(!hasNativeDetails()) {
-		$summary.addEventListener('click', ev => {
-			$element.getAttribute('open') !== null
-				? $element.removeAttribute('open')
-				: $element.setAttribute('open')
-		})
-	}
 
 	requestAnimationFrame(()=>{
 		cleanupDetails($details);
