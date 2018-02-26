@@ -83,6 +83,7 @@
 	border-radius: 100%;
 	background: $colour-text url(/public/assets/tick.svg) center center no-repeat;
 	background-size: 50%;
+	will-change: transform;
 
 	&[data-colour="1"] {
 		background-color: $colour-blue;

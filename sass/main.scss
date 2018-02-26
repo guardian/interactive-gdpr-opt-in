@@ -38,6 +38,8 @@
 
 .oi-wrap .gs-container {
 	padding: 0 $gs-gutter / 2;
+	margin-left: auto!important;
+	margin-right: auto!important;
 	@media (min-width: $mq-tablet){
 		padding: 0 $gs-gutter;
 	}

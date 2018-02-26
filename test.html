@@ -33,6 +33,10 @@ Promise.all([
   var $script = document.createElement("script");
   $script.src = "/public/main.js";
   document.body.appendChild($script);
+}).then(()=>{
+    setTimeout(()=>{
+        window.dispatchEvent(new Event('interactive-loaded'))
+    },1000)
 });
 
 ["public/main.css", "etc/gu.css", "etc/gu-fonts.css"].forEach(addCss);
