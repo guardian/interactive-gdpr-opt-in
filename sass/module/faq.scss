@@ -116,6 +116,9 @@ $expandy-size: 2.75rem;
 	color: $colour-text;
 	transition: max-height .125s ease-in;
 	overflow: hidden;
+	p:not(:last-of-type) {
+		margin-bottom: $paragraph-spacing;
+	}
 	& > * {
 		margin-bottom: $paragraph-spacing;
 		margin-right: $gs-gutter;

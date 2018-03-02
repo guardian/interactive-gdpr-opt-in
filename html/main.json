@@ -2,90 +2,105 @@
 	"props": {
 		"href": "https://profile.theguardian.com/consents/staywithus?returnUrl=http://www.theguardian.com"
 	},
-	"faqs": [
+	"faqs":
+	[
 		{
-			"title":"Why do I need to opt in to continue receiving marketing messages and newsletters from The Guardian by email?",
-			"body":[
+			"title": "Why do I need to opt in to continue receiving marketing messages and newsletters from The Guardian by email?",
+			"body": [
 				"We want to make sure that you still want to hear from us. That’s why we’re asking you to confirm what emails you’d like to receive from us, in line with upcoming changes to the law.",
 				"To make it easier for you to update and manage your preferences, and see what else is on offer, we’ve made changes to the Email Preferences centre within your Guardian account."
 			]
-		},{
-			"title":"What are marketing messages?",
-			"body":[
+		},
+		{
+			"title": "What are marketing messages?",
+			"body": [
 				"Marketing messages are when we tell you about The Guardian’s products and services, which we think may be of interest to you. They can be sent to you directly or included in other communications – such as details about the latest Masterclasses or special offers related to your subscription."
 			]
-		},{
-			"title":"What data do you collect when I sign up for an email and opt in to receive marketing?",
-			"body":[
-				"When you sign up to receive marketing from us, you choose how we contact you and what you’d like to receive from us. To find out more about data we collect and how we use it, please refer to the Privacy Policy, which is available at the bottom of all of our website pages."
+		},
+		{
+			"title": "What data do you collect when I sign up for an email and opt in to receive marketing?",
+			"body": [
+				"When you sign up to receive marketing from us, you choose how we contact you and what you’d like to receive from us. To find out more about data we collect and how we use it, please refer to the <a class='oi-a' href='https://www.theguardian.com/info/privacy' data-link-name='gdpr-oi-campaign : landing : pivacy'>Privacy Policy</a>, a link to which is available at the bottom of all of our website pages."
 			]
-		},{
-			"title":"If I opt in for marketing, will you share my contact details with other organisations?",
-			"body":[
+		},
+		{
+			"title": "If I opt in for marketing, will you share my contact details with other organisations?",
+			"body": [
 				"No, we never share your personal data with third parties for their own marketing purposes. All marketing messages are sent by us, however we may tell you about third party special offers in some of these messages."
 			]
-		},{
-			"title":"If I opt in, can I opt out again at a later date?",
-			"body":[
+		},
+		{
+			"title": "If I opt in, can I opt out again at a later date?",
+			"body": [
 				"Yes, you are always in control over your preferences and you can unsubscribe from your marketing preferences whenever you like. Simply visit the Email Preferences page in your Guardian account to opt out or click the unsubscribe link at the bottom of any email or newsletter."
 			]
-		},{
-			"title":"What happens if I don’t opt in by 30 April 2018?",
-			"body":[
+		},
+		{
+			"title": "What happens if I don’t opt in by 30 April 2018?",
+			"body": [
 				"If you miss the date to opt in, we won’t send you any more existing marketing messages or editorial newsletters, unless you update your Guardian account or sign up to new services.",
 				"You will still continue to receive emails from us in relation to any products or services you have purchased or subscribed to, but they won’t contain any marketing messages."
 			]
-		},{
-			"title":"What is changing in the law?",
-			"body":[
-				"This year, the EU is introducing a new law, which is designed to give you more control over how companies collect and use your personal data. It’s called General Data Protection Regulation (GDPR) and comes into effect from 25 May 2018.",
-				"Our activity to ensure that the marketing preferences we hold for you are current is therefore related to this new law.",
-				"GDPR law applies to all organisations located within the EU. As Guardian News & Media is registered in England and Wales, it’s governed by EU regulations. We are therefore contacting everyone currently receiving marketing messages from The Guardian.",
-				"The new law will continue to apply after the UK leaves the European Union and will be embedded in UK law through an updated Data Protection Act."
+		},
+		{
+			"title": "What is changing in the law?",
+			"body": [
+				"The EU have  introduced a new law, which is designed to give you more control over how companies collect and use your personal data. It’s called General Data Protection Regulation (GDPR) and comes into effect on 25 May 2018.",
+				"GDPR applies to all organisations located within the EU. As Guardian News & Media is registered in England and Wales, it’s governed by EU regulations. We are therefore contacting everyone currently receiving marketing messages from The Guardian to ensure we have your up to date data preferences..",
+				"The new law will continue to apply after the UK leaves the European Union."
 			]
-		},{
-			"title":"Why are editorial newsletters included in this process?",
-			"body":[
-				"In some instances, our newsletters may include content from our website, which has been funded by outside parties. They could also feature information about our other products, services or events, such as Guardian Jobs or Masterclasses as well as chosen charities and online advertisements."
+		},
+		{
+			"title": "Why are editorial newsletters included in this process?",
+			"body": [
+				"In some instances, our newsletters may include content from our website which has been funded by outside parties. They could also feature information about our other products, services or events, such as Guardian Jobs or Masterclasses as well as chosen charities and online advertisements."
 			]
-		},{
-			"title":"Do I need to opt in to comment on an article?",
-			"body":[
+		},
+		{
+			"title": "Do I need to opt in to comment on an article?",
+			"body": [
 				"No, but you’ll still need a Guardian account in order to be able to leave comments."
 			]
-		},{
-			"title":"Once I’ve opted in, where can I check my details and what I’ve subscribed to?",
-			"body":[
+		},
+		{
+			"title": "Once I’ve opted in, where can I check my details and what I’ve subscribed to?",
+			"body": [
 				"You can still check and update your personal details, preferred methods of contact and marketing preferences for your Guardian account in the same place. As long as you’re signed in you can access them through the ‘My Account’ link visible in the navigation bar at the top of every page on the Guardian website."
 			]
-		},{
-			"title":"I subscribe to different products with different email addresses. Can I opt in to all of them at the same time?",
-			"body":[
+		},
+		{
+			"title": "I subscribe to different products with different email addresses. Can I opt in to all of them at the same time?",
+			"body": [
 				"No, we’ll send an email to each account linked to the product you subscribe to. You will then have to opt in to each one separately."
 			]
-		},{
-			"title":"I’m a Soulmates member; will I need to opt in to receive marketing communications for these services?",
-			"body":[
+		},
+		{
+			"title": "I’m a Soulmates member; will I need to opt in to receive marketing communications for these services?",
+			"body": [
 				"Your Soulmates account is not connected to your Guardian account. You can manage your marketing preferences for your Soulmates account separately at any time."
 			]
-		},{
-			"title":"I use Guardian Jobs. Do I need to do anything?",
-			"body":[
+		},
+		{
+			"title": "I use Guardian Jobs. Do I need to do anything?",
+			"body": [
 				"When you opt in via your Guardian account, you’ll be asked if you’d like to continue receiving marketing communications for Guardian Jobs. Please note that these are different to the job alerts you receive from your Guardian Jobs account."
 			]
-		},{
-			"title":"If I don’t opt in will it affect my Guardian membership or supporter activity?",
-			"body":[
+		},
+		{
+			"title": "If I don’t opt in will it affect my Guardian membership or supporter activity?",
+			"body": [
 				"No, if you don’t opt in, all that will happen is that you’ll no longer receive marketing updates related to being a member or a supporter."
 			]
-		},{
-			"title":"Will not opting in affect my print or digital subscription?",
-			"body":[
+		},
+		{
+			"title": "Will not opting in affect my print or digital subscription?",
+			"body": [
 				"No, it won’t affect these services. However, you’ll no longer receive offers and marketing updates related to your subscription or other Guardian products. You’ll continue to receive emails regarding your subscription."
 			]
-		},{
-			"title":"What if I have an issue not covered in this FAQ?",
-			"body":[
+		},
+		{
+			"title": "What if I have an issue not covered in this FAQ?",
+			"body": [
 				"If you have any problems or concerns not covered on this page please contact us at <a class='oi-a' href='mailto:stay.with.us@theguardian.com' data-link-name='gdpr-oi-campaign : landing : email'>stay.with.us@theguardian.com</a>"
 			]
 		}
