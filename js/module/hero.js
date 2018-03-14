@@ -16,12 +16,12 @@ const colours = [
 const inject = ($element) => {
 
 	const nodes = [
-		...range(40).map(function(f) { return {
+		...range(70).map(function(f) { return {
 			radius: radius,
 			weight: 0.06,
 			colour: f%colours.length
 		}; }),
-		...range(25).map(function(f) { return {
+		...range(45).map(function(f) { return {
 			radius: radius,
 			weight: Math.random()*0.04 + 0.02,
 			colour: f%colours.length
@@ -65,7 +65,7 @@ const inject = ($element) => {
 				.force('y', forceY(0).strength(d => d.weight))
 				.force("r", null)
 				.on("tick", ticked);
-	},1000)
+	},1500)
 
 }
 
