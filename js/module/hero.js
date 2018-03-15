@@ -16,12 +16,12 @@ const colours = [
 const inject = ($element) => {
 
 	const nodes = [
-		...range(70).map(function(f) { return {
+		...range(60).map(function(f) { return {
 			radius: radius,
 			weight: 0.06,
 			colour: f%colours.length
 		}; }),
-		...range(45).map(function(f) { return {
+		...range(35).map(function(f) { return {
 			radius: radius,
 			weight: Math.random()*0.04 + 0.02,
 			colour: f%colours.length
