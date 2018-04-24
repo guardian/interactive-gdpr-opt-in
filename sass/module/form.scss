@@ -1,0 +1,61 @@
+.oi-form__label {
+	font-family: "Guardian Text Sans Web",sans-serif;
+	color: #666;
+	@media (min-width: $mq-collapse-columns) {
+		padding: 0 $gs-gutter;
+	}
+}
+
+.oi-form__set {
+	> * {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: $gs-gutter / 4;
+		}
+	}
+	@media (min-width: $mq-collapse-columns) {
+		display: flex;
+		> .oi-form__input {
+			flex: 1 1 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		> .oi-cta {
+			flex: 0 0 auto;
+			width: auto;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}
+
+
+.oi-form__input {
+	display: block;
+	padding: 0 $gs-gutter;
+	font-size: $font-size-cta;
+	font-family: $font-serif;
+	border-radius: 99999em;
+	transition: .125s;
+	font-weight: 800;
+	appearance: none;
+	text-decoration: none;
+	border: 1px solid transparent;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	contain: layout style paint;
+	height: $size-button-height * .85;
+	border: 1px solid $colour-neutral-2;
+	&:hover {
+		border-color: darken($colour-neutral-2,25%);
+	}
+	&:focus {
+		outline: none;
+		border-color: $colour-neutral-7;
+	}
+}

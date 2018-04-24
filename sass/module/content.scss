@@ -132,7 +132,8 @@ $colour-content-border: $colour-neutral-2;
 					border-left-width: 1px;
 				}
 			}
-			.oi-content-cta {
+			.oi-content-cta,
+			.oi-content-inset {
 				margin-left: $gs-gutter * -1;
 				margin-right: $gs-gutter * -1;
 			}
