@@ -1,12 +1,13 @@
 <form method="POST" action="https://profile.theguardian.com/actions/resub-email" class="oi-content-inset oi-form">
 	<input type="hidden" name="returnUrl" value="https://profile.theguardian.com/consents/staywithus?CMP=gdpr-oi-campaign-landing&utm_campaign=gdpr-oi-campaign-landing">
-
-	<label class="oi-form__label" for="srlf-email">Your email address</label>
-	<div class="oi-form__set">
-		<input class="oi-form__input" id="srlf-email" type="email" name="email" autocomplete="email" required="required" autocapitalize="off" autocorrect="off" spellcheck="false" autofocus="">
-		<button data-link-name="gdpr-oi-campaign : landing : send-email" class="oi-cta oi-cta--primary" type="submit">
-			Submit
-			{{> svg-arrow}}
-		</button>
-	</div>
+	<label>
+		<span class="oi-form__label">Please enter your email address</span>
+		<div class="oi-form__set">
+			<input class="oi-form__input" id="srlf-email" type="email" name="email" autocomplete="email" required="required" autocapitalize="off" autocorrect="off" spellcheck="false">
+			<button data-link-name="gdpr-oi-campaign : landing : send-email" class="oi-cta oi-cta--primary" type="submit">
+				Get started
+				{{> svg-arrow}}
+			</button>
+		</div>
+	</label>
 </form>
