@@ -132,11 +132,16 @@ $colour-content-border: $colour-neutral-2;
 					border-left-width: 1px;
 				}
 			}
-			.oi-content-cta,
-			.oi-content-inset {
-				margin-left: $gs-gutter * -1;
-				margin-right: $gs-gutter * -1;
-			}
 		}
+	}
+}
+
+.oi .oi-content-cta,
+.oi .oi-content-inset {
+	@media (min-width: $mq-collapse-columns) {
+		margin-left: $gs-gutter * -1;
+	}
+	@media (min-width: gs-span(10)) {
+		margin-right: $gs-gutter * -1;
 	}
 }
