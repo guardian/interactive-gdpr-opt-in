@@ -1,12 +1,8 @@
 import {inject as injectFaq} from './module/faq';
-//import {inject as injectFaqFooter} from './module/faq-footer';
-//import {inject as injectHero} from './module/hero';
-//import {inject as injectFaqMore} from './module/faq-more';
-//import {inject as injectResend} from './module/resend-widget';
+import {inject as injectForm} from './module/js-cta-form';
 
 const injectables = [
-	//['.oi-faq__footer', injectFaqFooter],
-	['.oi-hero', injectHero],
+	['.js-cta-form', injectForm],
 	['.oi-faq', injectFaq],
 ]
 

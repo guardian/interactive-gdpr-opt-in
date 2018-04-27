@@ -1,14 +1,22 @@
-<form method="POST" action="https://profile.theguardian.com/actions/resub-email?CMP=gdpr-oi-campaign-landing&utm_campaign=gdpr-oi-campaign-landing" class="oi-content-inset oi-form">
-	<input type="hidden" name="returnUrl" value="https://profile.theguardian.com/email-prefs?CMP=gdpr-oi-campaign-landing&utm_campaign=gdpr-oi-campaign-landing">
-	<input type="hidden" name="clientId" value="opt-in">
-	<label data-link-name="gdpr-oi-campaign : landing : send-email">
-		<span class="oi-form__label">Please enter your email address</span>
-		<div class="oi-form__set">
-			<input class="oi-form__input" type="email" name="email" autocomplete="email" required="required" autocapitalize="off" autocorrect="off" spellcheck="false">
-			<button class="oi-cta oi-cta--primary" type="submit">
-				Get started
-				{{> svg-arrow}}
-			</button>
-		</div>
-	</label>
+<form method="POST" action="https://profile.theguardian.com/actions/resub-email?CMP=gdpr-oi-campaign-landing&utm_campaign=gdpr-oi-campaign-landing" class="oi-content-inset oi-form js-cta-form">
+	<div class="js-cta-form__default">
+		<input type="hidden" name="returnUrl" value="https://profile.theguardian.com/email-prefs?CMP=gdpr-oi-campaign-landing&utm_campaign=gdpr-oi-campaign-landing">
+		<input type="hidden" name="clientId" value="opt-in">
+		<label data-link-name="gdpr-oi-campaign : landing : send-email">
+			<span class="oi-form__label">Please enter your email address</span>
+			<div class="oi-form__set">
+				<input class="oi-form__input" type="email" name="email" autocomplete="email" required="required" autocapitalize="off" autocorrect="off" spellcheck="false">
+				<button class="oi-cta oi-cta--primary" type="submit">
+					Get started
+					{{> svg-arrow}}
+				</button>
+			</div>
+		</label>
+	</div>
+	<div class="js-cta-form__alt" style="display:none;">
+		<a class="oi-cta oi-cta--primary" href="https://profile.theguardian.com/email-prefs?CMP=gdpr-oi-campaign-landing&utm_campaign=gdpr-oi-campaign-landing"  data-link-name="gdpr-oi-campaign : landing : signed-in-direct">
+			Opt in now
+			{{> svg-arrow}}
+		</a>
+	</div>
 </form>
