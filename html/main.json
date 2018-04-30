@@ -5,6 +5,12 @@
 	"faqs":
 	[
 		{
+			"title": "Why am I not receiving my Guardian Weekly or Membership Newsletter anymore?",
+			"body": [
+				"You will need to tick the Subscriptions, membership and contributions box from the secure link that we will send when you submit your email address <a class='oi-a' href='https://profile.theguardian.com/resub-email?CMP=gdpr-oi-campaign-landing&utm_campaign=gdpr-oi-campaign-landing'>here.</a>"
+			]
+		},
+		{
 			"title": "Why do I need to opt in to continue receiving marketing messages and newsletters from The Guardian by email?",
 			"body": [
 				"We want to make sure that you still want to hear from us. That’s why we’re asking you to confirm what emails you’d like to receive from us, in line with upcoming changes to the law.",
@@ -33,13 +39,6 @@
 			"title": "If I opt in, can I opt out again at a later date?",
 			"body": [
 				"Yes, you are always in control over your preferences and you can unsubscribe from your marketing preferences whenever you like. Simply visit the Email Preferences page in your Guardian account to opt out or click the unsubscribe link at the bottom of any email or newsletter."
-			]
-		},
-		{
-			"title": "What happens if I don’t opt in by 30 April 2018?",
-			"body": [
-				"If you miss the date to opt in, we won’t send you any more existing marketing messages or editorial newsletters, unless you update your Guardian account or sign up to new services.",
-				"You will still continue to receive emails from us in relation to any products or services you have purchased or subscribed to, but they won’t contain any marketing messages."
 			]
 		},
 		{
