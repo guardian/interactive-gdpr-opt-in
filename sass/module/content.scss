@@ -25,7 +25,7 @@ $colour-content-border: $colour-neutral-2;
 }
 
 .oi-content--intro {
-	@include oi-content-tone($colour-neutral-1, $colour-blue-dark)
+	@include oi-content-tone(#fff, $colour-blue)
 }
 
 .oi-content--video {
