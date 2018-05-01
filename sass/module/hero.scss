@@ -1,54 +1,44 @@
 .oi-hero {
 	overflow: hidden;
-	background: $colour-teal;
-	contain: strict;
+	background: $colour-blue;
 	width: 100%;
-	height: 200px;
 	position: relative;
-	@media (min-width: $mq-tablet){
-		height: 260px;
-	}
+	padding: 50px 0;
 	.gs-container {
 		position: relative;
 	}
 }
 
-.oi-hero__cta {
-	position: absolute;
-	top: 0;
-	left: -5px;
-	width: 100px;
-	height: 100px;
-	background: transparent url(/public/assets/support-cta.png) no-repeat top center;
+.oi-hero__title:after {
+	content: '';
+	display: block;
+	background: url(/public/assets/missing-mobile.svg) 0% 100% no-repeat;
 	background-size: contain;
-	z-index: 999;
-	@media (min-width: $mq-tablet){
-		width: 140px;
+	height: 80px;
+	@media (min-width: $mq-collapse-columns) {
+		height: 50px;
+		background-image: url(/public/assets/missing-desktop.svg);
+	}
+	max-width: 100%;
+}
+
+.oi-hero__subwrapper {
+	margin-left: ($gs-gutter)!important;
+	margin-right: ($gs-gutter)!important;
+	@media (min-width: $mq-collapse-columns+6em) {
+		margin-left: ($gs-gutter / 3) + gs-span(3.5)!important;
 	}
 }
 
-.oi-hero__wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	@media (min-width: $mq-tablet){
-		transform: scale(.9);
-	}
-}
-
-.oi-hero__title {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/public/assets/opt-in.gif) 50% 50% no-repeat;
-	background-size: contain;
-	@media (min-width: $mq-tablet){
-		background-position: 50% 50%;
+.oi-hero__subtitle {
+	max-width: gs-span(6);
+	font-family: $font-egyptian;
+	margin-top: ($paragraph-spacing/2)!important;
+	font-size: $font-size-cta;
+	line-height: 1.25;
+	font-weight: 500;
+	color: #fff;
+	@media (min-width: $mq-collapse-columns) {
+		font-size: $font-size-subtitle;
 	}
 }
