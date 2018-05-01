@@ -3,22 +3,42 @@
 	background: $colour-teal;
 	width: 100%;
 	position: relative;
+	padding: 50px 0;
 	.gs-container {
 		position: relative;
 	}
 }
 
-.oi-hero__title {
-	height: 200px;
-	background: url(/public/assets/missing-mobile.svg) 0% 50% no-repeat;
-	background-size: gs-span(3.5);
-	margin-left: ($gs-gutter)!important;
-	@media (min-width: $mq-collapse-columns+2em) {
+.oi-hero__title:after {
+	content: '';
+	display: block;
+	background: url(/public/assets/missing-mobile.svg) 0% 100% no-repeat;
+	background-size: contain;
+	height: 80px;
+	@media (min-width: $mq-collapse-columns) {
+		height: 50px;
 		background-image: url(/public/assets/missing-desktop.svg);
-		margin-left: ($gs-gutter / 3) + gs-span(3.5)!important;
-		background-size: gs-span(5);
 	}
-	@media (min-width: $mq-wide) {
-		background-size: gs-span(7);
+	max-width: 100%;
+}
+
+.oi-hero__subwrapper {
+	margin-left: ($gs-gutter)!important;
+	margin-right: ($gs-gutter)!important;
+	@media (min-width: $mq-collapse-columns+gs-span(2)) {
+		margin-left: ($gs-gutter / 3) + gs-span(3.5)!important;
+	}
+}
+
+.oi-hero__subtitle {
+	max-width: gs-span(6);
+	font-family: $font-egyptian;
+	margin-top: ($paragraph-spacing/2)!important;
+	font-size: $font-size-cta;
+	line-height: 1.25;
+	font-weight: 500;
+	color: #fff;
+	@media (min-width: $mq-collapse-columns) {
+		font-size: $font-size-subtitle;
 	}
 }
