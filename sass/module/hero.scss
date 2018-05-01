@@ -1,54 +1,24 @@
 .oi-hero {
 	overflow: hidden;
 	background: $colour-teal;
-	contain: strict;
 	width: 100%;
-	height: 200px;
 	position: relative;
-	@media (min-width: $mq-tablet){
-		height: 260px;
-	}
 	.gs-container {
 		position: relative;
 	}
 }
 
-.oi-hero__cta {
-	position: absolute;
-	top: 0;
-	left: -5px;
-	width: 100px;
-	height: 100px;
-	background: transparent url(/public/assets/support-cta.png) no-repeat top center;
-	background-size: contain;
-	z-index: 999;
-	@media (min-width: $mq-tablet){
-		width: 140px;
-	}
-}
-
-.oi-hero__wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	@media (min-width: $mq-tablet){
-		transform: scale(.9);
-	}
-}
-
 .oi-hero__title {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 100%;
-	width: 100%;
-	background: url(/public/assets/opt-in.gif) 50% 50% no-repeat;
-	background-size: contain;
-	@media (min-width: $mq-tablet){
-		background-position: 50% 50%;
+	height: 200px;
+	background: url(/public/assets/missing-mobile.svg) 0% 50% no-repeat;
+	background-size: gs-span(3.5);
+	margin-left: ($gs-gutter)!important;
+	@media (min-width: $mq-collapse-columns+2em) {
+		background-image: url(/public/assets/missing-desktop.svg);
+		margin-left: ($gs-gutter / 3) + gs-span(3.5)!important;
+		background-size: gs-span(5);
+	}
+	@media (min-width: $mq-wide) {
+		background-size: gs-span(7);
 	}
 }
