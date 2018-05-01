@@ -1,6 +1,6 @@
 .oi-hero {
 	overflow: hidden;
-	background: $colour-teal;
+	background: $colour-blue;
 	width: 100%;
 	position: relative;
 	padding: 50px 0;
@@ -25,7 +25,7 @@
 .oi-hero__subwrapper {
 	margin-left: ($gs-gutter)!important;
 	margin-right: ($gs-gutter)!important;
-	@media (min-width: $mq-collapse-columns+gs-span(2)) {
+	@media (min-width: $mq-collapse-columns+6em) {
 		margin-left: ($gs-gutter / 3) + gs-span(3.5)!important;
 	}
 }
