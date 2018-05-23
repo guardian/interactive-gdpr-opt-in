@@ -4,7 +4,7 @@ const VOTE_NAY = 'useless';
 const TEXT_YAY  = `That was useful`;
 const TEXT_NAY  = `I don't understand`;
 const TEXT_TKS  = `Thank you for the feedback!`;
-const TEXT_HELP = `If you’d like to know more, please contact us at <a class="oi-a" href="mailto:stay.with.us@theguardian.com" data-link-name="gdpr-oi-campaign : landing : faq : email : $1">stay.with.us@theguardian.com</a>`;
+const TEXT_HELP = `If you’d like to know more, please contact us at <a class="oi-a" href="mailto:userhelp@theguardian.com" data-link-name="gdpr-oi-campaign : landing : faq : email : $1">userhelp@theguardian.com</a>`;
 
 const makeVoteButton = (type, title) => {
 	const $button = document.createElement('button');
