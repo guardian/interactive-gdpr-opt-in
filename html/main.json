@@ -42,9 +42,9 @@
 			]
 		},
 		{
-			"title": "What is changing in the law?",
+			"title": "What has changed in the law?",
 			"body": [
-				"The EU have  introduced a new law, which is designed to give you more control over how companies collect and use your personal data. It’s called General Data Protection Regulation (GDPR) and comes into effect on 25 May 2018.",
+				"The EU have introduced a new law, which is designed to give you more control over how companies collect and use your personal data. It’s called General Data Protection Regulation (GDPR) and came into effect on 25 May 2018.",
 				"GDPR applies to all organisations located within the EU. As Guardian News & Media is registered in England and Wales, it’s governed by EU regulations. We are therefore contacting everyone currently receiving marketing messages from The Guardian to ensure we have your up to date data preferences..",
 				"The new law will continue to apply after the UK leaves the European Union."
 			]
@@ -76,7 +76,7 @@
 		{
 			"title": "I’m a Soulmates member; will I need to opt in to receive marketing communications for these services?",
 			"body": [
-				"Your Soulmates account is not connected to your Guardian account. You can manage your marketing preferences for your Soulmates account separately at any time."
+				"Your Soulmates account is not connected to your Guardian account. You can manage your marketing preferences for your <a href='http://soulmates.theguardian.com' class='oi-a'>Soulmates account</a> separately at any time."
 			]
 		},
 		{
@@ -100,7 +100,7 @@
 		{
 			"title": "What if I have an issue not covered in this FAQ?",
 			"body": [
-				"If you have any problems or concerns not covered on this page please contact us at <a class='oi-a' href='mailto:stay.with.us@theguardian.com' data-link-name='gdpr-oi-campaign : landing : email'>stay.with.us@theguardian.com</a>"
+				"If you have any problems or concerns not covered on this page please contact us at <a class='oi-a' href='mailto:userhelp@theguardian.com' data-link-name='gdpr-oi-campaign : landing : email'>userhelp@theguardian.com</a>"
 			]
 		}
 	]
